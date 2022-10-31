@@ -1,0 +1,112 @@
+﻿@model Estacionamento_ASP.Models.DTO.clienteModelo_DTO
+
+@{
+    ViewBag.Title = "CadCliente";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="layout-content">
+        <br />
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Cadastrar Cliente</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="cadastrarFunc">
+            <form action="" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-5" })
+                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { placeholder = "Informe um nome", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.CPF, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { placeholder = "999.999.999-99", @class = "form-control", @id = "CPF" } })
+                        @Html.ValidationMessageFor(model => model.CPF, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"> </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "Informe o placa", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { placeholder = "(99)9999-9999", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Celular, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.Celular, new { htmlAttributes = new { placeholder = "(99)99999-9999", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Celular, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.ValorMens, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.ValorMens, new { htmlAttributes = new { placeholder = "99.99 ou 99,99", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ValorMens, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+
+
+                </div>
+
+                @*__________________________________________E-mail/Senha______________________________________________________*@
+
+                @*__________________________________________INICIO ENDEREÇO LINHA 1___________________________________________*@
+                <hr />
+
+                <input type="hidden" id="id" name="id" value="" />
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+}
+
+    @*@section Scripts {
+      @Scripts.Render("~/bundles/jqueryval")
+     }*@
+
+
+
+@ViewBag.msg
+<script>
+    $(function () {
+        $('#ValorMens').maskMoney();
+        $("#ValorMens").maskMoney({ prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false });
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#CPF").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
+        $("#Telefone").inputmask("mask", { "mask": "(99)9999-9999" });
+        $("#Celular").inputmask("mask", { "mask": "(99)99999-9999" });
+        $("#CEP").inputmask("mask", { "mask": "99999-999" });
+        $("#Nascimento").inputmask("mask", { "mask": "99/99/9999" });
+        //$("#ValorMens").inputmask("mask", { "mask": "##9,99" }, { reverse: true });
+        
+    });
+</script>
+
+@Scripts.Render("~/bundles/inputmask")
+
+
