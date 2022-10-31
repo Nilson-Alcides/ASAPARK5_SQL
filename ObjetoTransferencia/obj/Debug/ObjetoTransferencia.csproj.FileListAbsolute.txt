@@ -1,0 +1,41 @@
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojAssemblyReference.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csproj.CoreCompileInputs.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb

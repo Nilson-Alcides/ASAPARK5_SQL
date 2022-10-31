@@ -1,0 +1,265 @@
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe.config
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.pdb
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.exe
+c:\users\nilson\documents\visual studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.frmSelecionarCliente.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmSelecionarCliente.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmSelecionarCliente.resources
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmEntrada.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmEntradaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmEntradaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmEntrada.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Apresentacao\obj\Debug\Apresentacao.FrmRelatorioEntradaAvulso.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmEntradaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar1.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmEntrada.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmRelatorioEntradaAvulso.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmEntradaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmEntrada.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmRelatorioEntradaAvulso.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.csprojAssemblyReference.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.Form1.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmEntradaPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar1.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmCadastrarPessoaFisica.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmClientePesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmFilialPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPedidoVendaCadastrar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaCadastrar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPessoaJuridicaPesquisar1.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPrecoCadastrar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPrecoPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmProdutoCadastrar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmProdutoPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmEntrada.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmRelatorioEntradaAvulso.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmSaida.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\RegraNegocioLojaUnipes.frmSplash.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmSplash1.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmVeiculoPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.FrmPessoaFisicaPesquisar.resources
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.csproj.CoreCompileInputs.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Apresentacao\obj\Debug\Apresentacao.pdb

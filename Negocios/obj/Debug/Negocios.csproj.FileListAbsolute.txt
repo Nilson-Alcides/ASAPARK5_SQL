@@ -1,0 +1,84 @@
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\Negocios.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\bin\Debug\ObjetoTransferencia.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debug\Negocios.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debug\Negocios.pdb

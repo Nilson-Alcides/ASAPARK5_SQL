@@ -1,0 +1,53 @@
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Bruno\Documents\MEGA\Projetos  .NET\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\Temporada2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK2\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Ponto Quatro\Documents\Visual Studio 2013\Projects\ASAPARK5\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojAssemblyReference.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CoreCompileInputs.cache
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb

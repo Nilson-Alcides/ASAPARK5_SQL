@@ -1,0 +1,8 @@
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\bin\Apresenracao_Web.dll.config
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\bin\Apresenracao_Web.dll
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\bin\Apresenracao_Web.pdb
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\obj\Debug\Apresenracao_Web.csprojResolveAssemblyReference.cache
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\obj\Debug\Apresenracao_Web.dll
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\obj\Debug\Apresenracao_Web.pdb
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Nilson\documents\visual studio 2013\Projects\Temporada2\Apresenracao_Web\obj\Debug\Apresenracao_Web.csprojFakesResolveAssemblyReference.cache
