@@ -120,7 +120,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\FuncionariosController.cs" />
+    <Compile Include="Controllers\GerenciamentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeusDadosController.cs" />
+    <Compile Include="Controllers\ProdutosController.cs" />
+    <Compile Include="Controllers\RelatoriosController.cs" />
+    <Compile Include="Controllers\VendasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +218,22 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Clientes\Cadastrar.cshtml" />
+    <Content Include="Views\Clientes\CadCliente.cshtml" />
+    <Content Include="Views\Clientes\Consultar.cshtml" />
+    <Content Include="Views\Clientes\DetalhesCliente.cshtml" />
+    <Content Include="Views\Clientes\ListarCliente.cshtml" />
+    <Content Include="Views\Funcionarios\Cadastrar.cshtml" />
+    <Content Include="Views\Funcionarios\Funcionarios.cshtml" />
+    <Content Include="Views\Gerenciamento\Retirada.cshtml" />
+    <Content Include="Views\MeusDados\MeusDados.cshtml" />
+    <Content Include="Views\Produtos\Cadastrar.cshtml" />
+    <Content Include="Views\Produtos\Consultar.cshtml" />
+    <Content Include="Views\Relatorios\Clientes.cshtml" />
+    <Content Include="Views\Relatorios\ProdutoEstoque.cshtml" />
+    <Content Include="Views\Relatorios\Vendas.cshtml" />
+    <Content Include="Views\Vendas\Consultar.cshtml" />
+    <Content Include="Views\Vendas\RealizarVenda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
