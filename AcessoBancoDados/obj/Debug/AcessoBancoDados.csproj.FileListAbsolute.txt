@@ -54,13 +54,13 @@ C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\AcessoBancoDados\
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CoreCompileInputs.cache
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojAssemblyReference.cache
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\bin\Debug\stdole.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojAssemblyReference.cache
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CoreCompileInputs.cache
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CopyComplete
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb

@@ -41,13 +41,13 @@ C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferenc
 C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\ObjetoTransferencia.pdb
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojAssemblyReference.cache
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csproj.CoreCompileInputs.cache
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\bin\Debug\stdole.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csprojAssemblyReference.cache
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csproj.CoreCompileInputs.cache
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.csproj.CopyComplete
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ObjetoTransferencia\obj\Debug\ObjetoTransferencia.pdb

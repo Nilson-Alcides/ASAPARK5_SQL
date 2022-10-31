@@ -85,7 +85,12 @@ C:\Users\Nilson\Desktop\ASAPARK5_Atualizado_25_09_2018_10_00hs\Negocios\obj\Debu
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\Negocios.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\Negocios.pdb
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\stdole.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\AcessoBancoDados.pdb
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\AcessoBancoDados.dll.config
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\ObjetoTransferencia.pdb
@@ -94,8 +99,3 @@ C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\obj\Debug\Negocios.c
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\obj\Debug\Negocios.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\obj\Debug\Negocios.pdb
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Negocios\bin\Debug\stdole.dll
