@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apresentacao", "Apresentaca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjetoTransferencia", "ObjetoTransferencia\ObjetoTransferencia.csproj", "{C0EEFF22-B6F6-4619-A5C8-65675B3BDFAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamento", "Estacionamento\Estacionamento.csproj", "{AC63A00C-53D4-4E71-8DFA-9D1B7ADD7705}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{C0EEFF22-B6F6-4619-A5C8-65675B3BDFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0EEFF22-B6F6-4619-A5C8-65675B3BDFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0EEFF22-B6F6-4619-A5C8-65675B3BDFAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC63A00C-53D4-4E71-8DFA-9D1B7ADD7705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC63A00C-53D4-4E71-8DFA-9D1B7ADD7705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC63A00C-53D4-4E71-8DFA-9D1B7ADD7705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC63A00C-53D4-4E71-8DFA-9D1B7ADD7705}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

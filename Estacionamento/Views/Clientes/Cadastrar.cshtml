@@ -1,0 +1,155 @@
+﻿<section class="layout-content">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="fas fa-caret-right"></i>
+                    <span>Cadastrar Clientes</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="cadastrarFunc">
+        <form action="" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome do Cliente</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome Completo"
+                           autofocus="autofocus" name="nome" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nome">CPF</label>
+                    <input type="text" class="form-control" id="nome" placeholder="111.111.111/11"
+                           autofocus="autofocus" name="nome" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Telefone 1</label>
+                    <input type="text" class="form-control" id="nome" placeholder="(11) 90000-1121"
+                           autofocus="autofocus" name="nome" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Telefone 2</label>
+                    <input type="text" class="form-control" id="nome" placeholder="(11) 90000-1121"
+                           autofocus="autofocus" name="nome" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" name="endereco.cidade" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="uf">UF</label>
+                    <select id="uf" class="form-control" name="endereco.uf">
+                        <option value="">Selecione...</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" class="form-control" id="logradouro" placeholder="logradouro sem número"
+                           name="endereco.logradouro" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" name="endereco.bairro" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="numero">Número</label>
+                    <input type="text" class="form-control" id="numero" name="endereco.numero" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="cep">Cep</label>
+                    <input type="text" class="form-control" id="cep" data-mask="00000-000" placeholder="00000-000"
+                           name="endereco.cep" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" placeholder="fundos, casa, AP. 102, .."
+                           name="endereco.complemento" value="" />
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+            </div>
+          
+                <input type="hidden" id="id" name="id" value="" />
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+        </form>
+    </div>
+</section>
+
