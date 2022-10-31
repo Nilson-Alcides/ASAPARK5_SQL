@@ -1,2 +1,0 @@
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Estacionamento\obj\Debug\Estacionamento.csprojAssemblyReference.cache
-C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Estacionamento\obj\Debug\Estacionamento.csproj.CoreCompileInputs.cache
