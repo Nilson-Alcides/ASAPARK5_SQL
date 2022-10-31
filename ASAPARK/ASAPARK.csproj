@@ -125,6 +125,7 @@
     <Compile Include="Controllers\GerenciamentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeusDadosController.cs" />
+    <Compile Include="Controllers\PessoaFisicaController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\RelatoriosController.cs" />
     <Compile Include="Controllers\VendasController.cs" />
@@ -234,6 +235,7 @@
     <Content Include="Views\Relatorios\Vendas.cshtml" />
     <Content Include="Views\Vendas\Consultar.cshtml" />
     <Content Include="Views\Vendas\RealizarVenda.cshtml" />
+    <Content Include="Views\PessoaFisica\ConsultarCodigoNome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +253,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{59e92659-94ba-402e-aab2-c1dd04202ee8}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
+      <Project>{c0eeff22-b6f6-4619-a5c8-65675b3bdfaf}</Project>
+      <Name>ObjetoTransferencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

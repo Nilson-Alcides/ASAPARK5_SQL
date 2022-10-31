@@ -77,3 +77,10 @@ C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\obj\Debug\ASAPARK.csp
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\obj\Debug\ASAPARK.csproj.CopyComplete
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\obj\Debug\ASAPARK.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\obj\Debug\ASAPARK.pdb
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\Negocios.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\ObjetoTransferencia.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\AcessoBancoDados.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\Negocios.pdb
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\ObjetoTransferencia.pdb
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\AcessoBancoDados.pdb
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\ASAPARK\bin\AcessoBancoDados.dll.config
