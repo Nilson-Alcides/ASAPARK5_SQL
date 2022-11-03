@@ -33,7 +33,8 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@Bairro", pessoaFisica.Bairro.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@CEP", pessoaFisica.CEP.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@DataVencimento", pessoaFisica.DataNascimento);
-
+                
+                
                 string IdPessoaFisica = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspPessoaFisicaInserir").ToString();
 
                 return IdPessoaFisica;

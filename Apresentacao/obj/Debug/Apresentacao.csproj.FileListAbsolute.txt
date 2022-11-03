@@ -270,8 +270,10 @@ C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\Crysta
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\Negocios.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\ObjetoTransferencia.dll
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\WebActivatorEx.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\AcessoBancoDados.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\stdole.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\Apresentacao\bin\Debug\Negocios.pdb

@@ -148,7 +148,7 @@ namespace Apresentacao
                 string retorno = pessoaFisicaNegocios.Inserir(pessoaFisica);
                 try
                 {
-                    int IdCliente = Convert.ToInt32(retorno);
+                    int IdCliente = Convert.ToInt32(retorno); 
 
 
                     if (rdBCliente.Checked == true)
@@ -188,7 +188,7 @@ namespace Apresentacao
 
                         MessageBox.Show("Filial cadastrada com sucesso " + IdCliente.ToString());
                         this.DialogResult = DialogResult.Yes;
-                    }
+                    } 
 
                     LimparCampos();
 

@@ -25,6 +25,13 @@ namespace ASAPARK
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+           
+            bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
+           "~/Scripts/inputmask/jquery.inputmask.js",
+           "~/Scripts/inputmask/inputmask.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles").Include(
+           "~/Scripts/jquery.moneymask.js"));
         }
     }
 }
