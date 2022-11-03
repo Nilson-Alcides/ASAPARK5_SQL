@@ -24,6 +24,11 @@ namespace ASAPARK.Controllers
         {
             return View(pessoaFisicaNegocios.ConsultarCodigoNome(IdPessoaFisica, nome));
         }
+        //Listar Cliente Detalhes
+        public ActionResult ConsultarCodigoNomeDetalhes(int? id, string nome)
+        {
+            return View(pessoaFisicaNegocios.ConsultarCodigoNome(id, nome).Find(pessoaFisica => pessoaFisica.Pessoa.IdPessoa == id));
+        }
 
         public ActionResult CadPessoaFisica()
         {
@@ -88,5 +93,6 @@ namespace ASAPARK.Controllers
             return View();
 
         }
+        
     }
 }

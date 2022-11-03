@@ -238,7 +238,7 @@ namespace Apresentacao
                 MudarCorTextBox();
             }
         }
-
+        //Valida CPF
         bool validaCPF()
         {
             // Para entender mais o algoritmo sendo feito, visite o site do início do vídeo. Link na descrição!

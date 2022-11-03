@@ -246,6 +246,7 @@
     <Content Include="Views\Vendas\RealizarVenda.cshtml" />
     <Content Include="Views\PessoaFisica\ConsultarCodigoNome.cshtml" />
     <Content Include="Views\PessoaFisica\CadPessoaFisica.cshtml" />
+    <Content Include="Views\PessoaFisica\ConsultarCodigoNomeDetalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
