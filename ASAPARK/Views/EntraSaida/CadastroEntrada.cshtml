@@ -29,7 +29,6 @@
                     <div class="form-group col-md-4">
                         <br /><br />
                         @Html.DropDownList("fil", "Escolha a Filial")
-
                         <div class="invalid-feedback"></div>
                     </div>
 
@@ -37,7 +36,7 @@
                     <div class="form-group col-md-6">
                         <br /><br />
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        @Html.DropDownList("pre", "Escolha o Valor")
+                        @Html.DropDownList("pre", "Escolha o Valor")                        
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@
 
                     <div class="form-group col-md-3">
                         @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
-                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control" } })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control", @id = "Placa" } })
                         @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
                         <div class="invalid-feedback"></div>
                     </div>
@@ -82,11 +81,8 @@
 
 <script>
     $(document).ready(function () {
-        $('#PrecoUni').mask('#.##0,00', { reverse: true });
-        $("#ISBN").inputmask("mask", { "mask": "999-99-99999-99-9" });
-        $("#Celular").inputmask("mask", { "mask": "(99)99999-9999" });
-        $("#CEP").inputmask("mask", { "mask": "99999-999" });
-        $("#Nascimento").inputmask("mask", { "mask": "99/99/9999" });
+        $("#Placa").inputmask("mask", { "mask": "AAA-9A99" });
+        
     });
 </script>
 

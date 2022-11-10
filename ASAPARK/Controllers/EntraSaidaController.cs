@@ -88,18 +88,12 @@ namespace ASAPARK.Controllers
             carregarPreco();
             string IdPessoa = Request["fil"];
             string IdPreco = Request["pre"];
-            //Pessoa Pessoa = new Pessoa();
-            //entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(Request["fil"]);
-            //Preco Preco = new Preco();
-            //entradaSaida.Preco.IdPreco = Convert.ToInt32(Request["pre"]);
-
 
             if (ModelState.IsValid)
             {
                 string hora_atual = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
 
-                DateTime Data = DateTime.Now;
-                
+                DateTime Data = DateTime.Now;                
                 string h1 = hora_atual;
                 int mm = 60;
 
@@ -119,7 +113,6 @@ namespace ASAPARK.Controllers
                 string retorno = entradaSaidaNegocios.Inserir(entradaSaida);
 
 
-
                 //TODO Imprementar redirecionamento diferenetes
                 ViewBag.msg = "Entrada cadastrado com sucesso!";
                 return RedirectToAction(nameof(CadastroEntrada));
@@ -127,6 +120,9 @@ namespace ASAPARK.Controllers
             return View();
         }
 
-
+        public ActionResult ConsultarEntrada()
+        {
+            return View(entradaSaidaNegocios.ConsultarTodasEntradas());
+        }
     }
 }

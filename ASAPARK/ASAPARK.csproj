@@ -249,6 +249,7 @@
     <Content Include="Views\PessoaFisica\CadPessoaFisica.cshtml" />
     <Content Include="Views\PessoaFisica\ConsultarCodigoNomeDetalhes.cshtml" />
     <Content Include="Views\EntraSaida\CadastroEntrada.cshtml" />
+    <Content Include="Views\EntraSaida\ConsultarEntrada.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
