@@ -1,0 +1,97 @@
+﻿@model ObjetoTransferencia.EntradaSaida
+
+@{
+    ViewBag.Title = "CadastroEntrada";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="layout-content">
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Cadastrar Entrada</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="cadastrarProd">
+            <form action="" method="POST">
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <br /><br />
+                        @Html.DropDownList("fil", "Escolha a Filial")
+
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <br /><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                        @Html.DropDownList("pre", "Escolha o Valor")
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        @Html.LabelFor(model => model.DescricaoCarro, htmlAttributes: new { @class = "control-label col-md-5" })
+                        @Html.EditorFor(model => model.DescricaoCarro, new { htmlAttributes = new { placeholder = "Informe o Modelo", @class = "form-control", @id = "DescricaoCarro" } })
+                        @Html.ValidationMessageFor(model => model.DescricaoCarro, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    @*<div class="form-group col-md-3">
+                            @Html.LabelFor(model => model.DataEntrada, htmlAttributes: new { @class = "control-label col-md-3" })
+                            @Html.EditorFor(model => model.DataEntrada, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+
+                            <div class="invalid-feedback"> </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            @Html.LabelFor(model => model.HoraEntrada, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.EditorFor(model => model.HoraEntrada, new { htmlAttributes = new { @class = "form-control", @type = "time" } })
+
+                        </div>*@
+                </div>
+
+                <button type="button" class="btn btn-outline-primary" style="color:black">
+                    @Html.ActionLink("Voltar", "ListarProdutos", new { @style = "color:white" })
+                </button>
+                <input type="hidden" id="id" name="id" value="" />
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+}
+
+<script>
+    $(document).ready(function () {
+        $('#PrecoUni').mask('#.##0,00', { reverse: true });
+        $("#ISBN").inputmask("mask", { "mask": "999-99-99999-99-9" });
+        $("#Celular").inputmask("mask", { "mask": "(99)99999-9999" });
+        $("#CEP").inputmask("mask", { "mask": "99999-999" });
+        $("#Nascimento").inputmask("mask", { "mask": "99/99/9999" });
+    });
+</script>
+
+@Scripts.Render("~/bundles/inputmask")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

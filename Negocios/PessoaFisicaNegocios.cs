@@ -21,7 +21,7 @@ namespace Negocios
             try
             {
                 acessoDadosSqlServer.LimpaParametros();
-                
+
                 acessoDadosSqlServer.AdicionaParametros("@Nome", pessoaFisica.Nome.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@CPF", pessoaFisica.Cpf.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@RG", pessoaFisica.Rg.ToUpper());
@@ -33,8 +33,8 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@Bairro", pessoaFisica.Bairro.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@CEP", pessoaFisica.CEP.ToUpper());
                 acessoDadosSqlServer.AdicionaParametros("@DataVencimento", pessoaFisica.DataNascimento);
-                
-                
+
+
                 string IdPessoaFisica = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspPessoaFisicaInserir").ToString();
 
                 return IdPessoaFisica;
@@ -80,7 +80,7 @@ namespace Negocios
                 pessoaFisica.Bairro = Convert.ToString(DataRow["Bairro"]);
                 pessoaFisica.CEP = Convert.ToString(DataRow["CEP"]);
 
-                
+
                 pessoaFisicaColecao.Add(pessoaFisica);
             }
             return pessoaFisicaColecao;

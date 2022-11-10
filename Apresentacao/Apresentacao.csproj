@@ -326,7 +326,6 @@
     </EmbeddedResource>
     <None Include="imagens\asapark_Sistema-1.psd" />
     <None Include="imagens\asapark_Sistema-2.psd" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -389,15 +388,6 @@
   <ItemGroup>
     <Content Include="imagens\Asapark.png" />
     <Content Include="imagens\Asapark_Sistema-2.png" />
-    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
-    <Content Include="Scripts\inputmask\inputmask.es6.js" />
-    <Content Include="Scripts\inputmask\inputmask.js" />
-    <Content Include="Scripts\inputmask\inputmask.min.js" />
-    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
-    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

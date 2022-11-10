@@ -124,6 +124,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EntraSaidaController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\GerenciamentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -247,6 +248,7 @@
     <Content Include="Views\PessoaFisica\ConsultarCodigoNome.cshtml" />
     <Content Include="Views\PessoaFisica\CadPessoaFisica.cshtml" />
     <Content Include="Views\PessoaFisica\ConsultarCodigoNomeDetalhes.cshtml" />
+    <Content Include="Views\EntraSaida\CadastroEntrada.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,7 +31,7 @@ namespace ObjetoTransferencia
         [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Informe um email válido...")]
         public String Email { get; set; }
 
-        [Display(Name = "Logradouro ", Description = "rua/avenida/praça")]
+        [Display(Name = "Endereço ", Description = "rua/avenida/praça")]
         [Required(ErrorMessage = "O nome é obrigatório.")]
         public String Endereco { get; set; }
 

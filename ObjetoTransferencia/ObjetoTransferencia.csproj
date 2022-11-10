@@ -124,20 +124,6 @@
     <Compile Include="Situacao.cs" />
     <Compile Include="SituacaoColecao.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
-    <Content Include="Scripts\inputmask\inputmask.es6.js" />
-    <Content Include="Scripts\inputmask\inputmask.js" />
-    <Content Include="Scripts\inputmask\inputmask.min.js" />
-    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
-    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

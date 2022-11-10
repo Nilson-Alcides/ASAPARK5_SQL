@@ -65,3 +65,4 @@ C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\Ac
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CopyComplete
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
 C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
+C:\Users\Nilson\source\repos\ASAPARK5\ASAPARK5_SQL\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojAssemblyReference.cache
