@@ -9,9 +9,8 @@ using System.Web.Mvc;
 
 namespace ASAPARK.Controllers
 {
-    public class EntraSaidaController : Controller
+    public class SaidaController : Controller
     {
-
         //Carrega Filial
 
         public void carregarFilial()
@@ -70,83 +69,19 @@ namespace ASAPARK.Controllers
         // GET: EntraSaida
         EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
         EntradaSaida entradaSaida = new EntradaSaida();
+
+        // GET: Saida
         public ActionResult Index()
         {
             return View();
         }
-        //Cadastrar Entrada
-        public ActionResult CadastroEntrada()
-        {
-            carregarFilial();
-            carregarPreco();
-            return View();
-        }
-        //Cadastrar Entrada
-        [HttpPost]
-        public ActionResult CadastroEntrada(EntradaSaida entradaSaida, string dateTimeEntada)
-        {
-            carregarFilial();
-            carregarPreco();
-            string IdPessoa = Request["fil"];
-            string IdPreco = Request["pre"];
-
-            if (ModelState.IsValid)
-            {
-                string hora_atual = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
-
-                DateTime Data = DateTime.Now;
-                string h1 = hora_atual;
-                int mm = 60;
-
-                int HorasEntrada = Convert.ToInt32(h1.Substring(0, 2));
-                int MinutoEntrada = Convert.ToInt32(h1.Substring(3, 2));
-
-                //entradaSaida.DescricaoCarro = Convert.ToString(txtDescricaoCarro.Text).ToUpper();
-                //entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
-                entradaSaida.Preco = new Preco();
-                entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
-                entradaSaida.Pessoa = new Pessoa();
-                entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(IdPessoa);
-                entradaSaida.DataEntrada = Convert.ToDateTime(Data);
-                entradaSaida.HoraEntrada = Convert.ToInt32(HorasEntrada);
-                entradaSaida.MinutoEntrada = Convert.ToInt32(MinutoEntrada);
-
-                string retorno = entradaSaidaNegocios.Inserir(entradaSaida);
-
-
-                //TODO Imprementar redirecionamento diferenetes
-                ViewBag.msg = "Entrada cadastrado com sucesso!";
-                return RedirectToAction(nameof(ConsultarEntrada));
-            }
-            return View();
-        }
-
-        public ActionResult ConsultarEntrada()
+        public ActionResult ConsultarSaida()
         {
             return View(entradaSaidaNegocios.ConsultarTodasEntradas());
         }
-        public ActionResult ConsultarEntradaDetalhes(int id)
+        public ActionResult SaidaDetalhes(int id)
         {
             return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
         }
-        // EDITAR Entrada        
-        public ActionResult EditarEntrada(int id)
-        {
-            carregarPreco();
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
-
-        }
-        [HttpPost]
-        public ActionResult EditarEntrada(EntradaSaida entradaSaida)
-        {
-            carregarPreco();
-            string IdPreco = Request["pre"];
-            entradaSaida.Preco = new Preco();
-            entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
-
-            entradaSaidaNegocios.AlterarEntrada(entradaSaida);
-            return RedirectToAction(nameof(ConsultarEntrada));
-        }
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ObjetoTransferencia.EntradaSaida>
 
 @{
-    ViewBag.Title = "ConsultarEntrada";
+    ViewBag.Title = "ConsultarSaida";
 }
 
 
@@ -40,30 +40,30 @@
                     @foreach (var entrada in Model)
                     {
 
-                    <tr>
-                        <td>@entrada.IdEntraSaida </td>
-                        <td>@entrada.DescricaoCarro</td>
-                        <td>@entrada.Placa</td>
-                        <td>@entrada.DataEntrada</td>
-                        <td>@entrada.Preco.Valor.ToString("C2")</td>
+                        <tr>
+                            <td>@entrada.IdEntraSaida </td>
+                            <td>@entrada.DescricaoCarro</td>
+                            <td>@entrada.Placa</td>
+                            <td>@entrada.DataEntrada</td>
+                            <td>@entrada.Preco.Valor.ToString("C2")</td>
 
 
-                        <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "ConsultarEntradaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
-                            </button>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-info btn-sm">
+                                    @Html.ActionLink("Detalhes", "SaidaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                                </button>
 
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
-                            </button>
+                                <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
+                                    @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                                </button>
 
 
-                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
-                                @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
-                                new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
-                            </button>
-                        </td>
-                    </tr>
+                                <button type="button" class="btn btn-danger btn-sm da" style="color:black">
+                                    @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
+                                    new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
+                                </button>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

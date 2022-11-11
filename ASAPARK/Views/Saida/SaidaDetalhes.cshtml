@@ -1,0 +1,95 @@
+﻿@model ObjetoTransferencia.EntradaSaida
+
+@{
+    ViewBag.Title = "SaidaDetalhes";
+}
+
+
+@using (Html.BeginForm("SaidaDetalhes", "Saida"))
+{
+    @Html.AntiForgeryToken()
+    <section class="layout-content">
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Detalhes Entrada</span>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-primary" href="/Funcionario/CadastroFuncionario/@Model.Pessoa.IdPessoa" role="button">
+                    <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
+                    <span>Cadastrar Novo Endereço</span>
+                </a>
+            </div>
+        </nav>
+        <div class="container" id="cadastrarFunc">
+            <form action="" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-1">
+                        @Html.LabelFor(model => model.IdEntraSaida, htmlAttributes: new { @class = "control-label col-md-1" })
+                        @Html.EditorFor(model => model.IdEntraSaida, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.DescricaoCarro, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.DescricaoCarro, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { @class = "form-control", @id = "CPF", @readonly = "readonly" } })
+                        <div class="invalid-feedback"> </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.DataEntrada, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.DataEntrada, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                @*<div class="form-row">
+
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.HoraEntrada, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.HoraEntrada, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    </div>
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.MinutoEntrada, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.MinutoEntrada, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Preco.Valor, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Preco.Valor, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>*@
+
+                @*__________________________________________TELEFONE______________________________________________________*@
+                <div class="form-row">
+
+
+
+                </div>
+                @*__________________________________________FIM TELEFONE______________________________________________________*@
+
+                @*__________________________________________INICIO ENDEREÇO LINHA 1___________________________________________*@
+                <hr />
+
+
+                @*__________________________________________FIM ENDEREÇO______________________________________________________*@
+                <button type="button" class="btn btn-outline-primary" style="color:black">
+                    @Html.ActionLink("Voltar", "ConsultarCodigoNome", new { @style = "color:white" })
+                </button>
+                <button type="button" class="btn btn-warning" style="color:black">
+                    @Html.ActionLink("Editar", "EditarCliente", new { id = Model.Pessoa.IdPessoa }, new { @style = "color:white" })
+                </button>
+            </form>
+        </div>
+    </section>
+}

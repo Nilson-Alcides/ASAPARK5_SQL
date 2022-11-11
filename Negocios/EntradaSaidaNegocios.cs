@@ -171,7 +171,7 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@MinutoSaida", entradaSaida.MinutoSaida);
                 acessoDadosSqlServer.AdicionaParametros("@ValorTotal", entradaSaida.ValorTotal);
 
-                string IdEntrada = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspEntraAlterar").ToString();
+                string IdEntrada = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSaidaAlterar").ToString();
 
                 return IdEntrada;
             }
