@@ -90,6 +90,7 @@
     <Compile Include="ClienteNegocios.cs" />
     <Compile Include="EntradaSaidaNegocios.cs" />
     <Compile Include="FornecedorNegocios.cs" />
+    <Compile Include="MarcaNegocios.cs" />
     <Compile Include="MensalistaNegicios.cs" />
     <Compile Include="FilialNegocios.cs" />
     <Compile Include="PedidoItemNegocios.cs" />

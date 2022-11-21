@@ -92,6 +92,7 @@
     <Compile Include="ClienteColecao.cs" />
     <Compile Include="EntradaSaida.cs" />
     <Compile Include="EntradaSaidaColecao.cs" />
+    <Compile Include="EntradaSaidaItens.cs" />
     <Compile Include="Estoque.cs" />
     <Compile Include="EstoqueColecao.cs" />
     <Compile Include="EstoqueMovimentadoColecao.cs" />
@@ -102,6 +103,8 @@
     <Compile Include="FilialColecao.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="FornecedorColecao.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="MarcaColecao.cs" />
     <Compile Include="Operacao.cs" />
     <Compile Include="OperacaoColecao.cs" />
     <Compile Include="Pedido.cs" />

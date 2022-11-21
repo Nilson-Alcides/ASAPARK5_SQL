@@ -101,8 +101,10 @@ namespace ASAPARK.Controllers
                 int HorasEntrada = Convert.ToInt32(h1.Substring(0, 2));
                 int MinutoEntrada = Convert.ToInt32(h1.Substring(3, 2));
 
+
                 //entradaSaida.DescricaoCarro = Convert.ToString(txtDescricaoCarro.Text).ToUpper();
                 //entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
+                
                 entradaSaida.Preco = new Preco();
                 entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
                 entradaSaida.Pessoa = new Pessoa();

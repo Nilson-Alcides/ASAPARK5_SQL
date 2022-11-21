@@ -27,8 +27,8 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@IdPessoa", entradaSaida.Pessoa.IdPessoa);
                 acessoDadosSqlServer.AdicionaParametros("@DataEntrada", entradaSaida.DataEntrada);
                 acessoDadosSqlServer.AdicionaParametros("@HoraEntrada", entradaSaida.HoraEntrada);
-                acessoDadosSqlServer.AdicionaParametros("@MinutoEntrada", entradaSaida.MinutoEntrada);
-
+                acessoDadosSqlServer.AdicionaParametros("@MinutoEntrada", entradaSaida.MinutoEntrada);                
+                
                 string IdEntraSaida = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspEntradaInserir").ToString();
 
                 return IdEntraSaida;
@@ -111,7 +111,7 @@ namespace Negocios
                 EntradaSaidaColecao entradaSaidaColecao = new EntradaSaidaColecao();
 
                 acessoDadosSqlServer.LimpaParametros();
-                
+
                 DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
                     CommandType.StoredProcedure, "uspConsultarEntada");
 
