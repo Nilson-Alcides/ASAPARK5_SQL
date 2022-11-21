@@ -1,0 +1,49 @@
+﻿@model ObjetoTransferencia.Marca
+
+@{
+    ViewBag.Title = "MarcaDetalhes";
+}
+@using (Html.BeginForm("MarcaDetalhes", "Marca"))
+{
+    @Html.AntiForgeryToken()
+    <section class="layout-content">
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Detalhes Marca</span>
+                    </li>
+                </ul>
+                @*<a class="btn btn-outline-primary" href="/Funcionario/CadastroFuncionario/@Model.IdMarca" role="button">
+                    <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
+                    <span>Cadastrar Novo Endereço</span>
+                </a>*@
+            </div>
+        </nav>
+        <div class="container" id="cadastrarFunc">
+            <form action="" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        @Html.LabelFor(model => model.IdMarca, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.IdMarca, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary" style="color:black">
+                    @Html.ActionLink("Voltar", "ConsultarMarca", new { @style = "color:white" })
+                </button>
+                <button type="button" class="btn btn-warning" style="color:black">
+                    @Html.ActionLink("Editar", "EditarMarca", new { id = Model.IdMarca }, new { @style = "color:white" })
+                </button>
+            </form>
+        </div>
+    </section>
+}

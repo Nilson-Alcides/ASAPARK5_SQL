@@ -43,16 +43,16 @@
 
                             <td colspan="2">
                                 <button type="button" class="btn btn-info btn-sm">
-                                    @Html.ActionLink("Detalhes", "ConsultarEntradaDetalhes", new { id = entrada.IdMarca }, new { @style = "color:white" })
+                                    @Html.ActionLink("Detalhes", "MarcaDetalhes", new { id = entrada.IdMarca }, new { @style = "color:white" })
                                 </button>
 
                                 <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                    @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdMarca }, new { @style = "color:white" })
+                                    @Html.ActionLink("Editar", "EditarMarca", new { id = entrada.IdMarca }, new { @style = "color:white" })
                                 </button>
 
 
                                 <button type="button" class="btn btn-danger btn-sm da" style="color:black">
-                                    @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdMarca },
+                                    @Html.ActionLink("Excluir", "ExcluirMarca", new { id = entrada.IdMarca },
                                     new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
                                 </button>
                             </td>

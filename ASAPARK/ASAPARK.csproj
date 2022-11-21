@@ -260,6 +260,8 @@
     <Content Include="Views\Saida\EditarSaida.cshtml" />
     <Content Include="Views\Marca\ConsultarMarca.cshtml" />
     <Content Include="Views\Marca\CadMarca.cshtml" />
+    <Content Include="Views\Marca\MarcaDetalhes.cshtml" />
+    <Content Include="Views\Marca\EditarMarca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
