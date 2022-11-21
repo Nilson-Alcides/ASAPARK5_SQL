@@ -129,6 +129,7 @@
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\GerenciamentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\MeusDadosController.cs" />
     <Compile Include="Controllers\PessoaFisicaController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
@@ -257,6 +258,8 @@
     <Content Include="Views\Saida\ConsultarSaida.cshtml" />
     <Content Include="Views\Saida\SaidaDetalhes.cshtml" />
     <Content Include="Views\Saida\EditarSaida.cshtml" />
+    <Content Include="Views\Marca\ConsultarMarca.cshtml" />
+    <Content Include="Views\Marca\CadMarca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
