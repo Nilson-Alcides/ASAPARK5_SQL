@@ -51,9 +51,9 @@
                                 </button>
 
 
-                                <button type="button" class="btn btn-danger btn-sm da" style="color:black">
-                                    @Html.ActionLink("Excluir", "ExcluirMarca", new { id = entrada.IdMarca },
-                                    new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
+                                <button type="button" class="btn btn-danger btn-sm da fas fa-trash">
+                                    @Html.ActionLink("Excluir", "ExcluirMarca", new { id = entrada.IdMarca }, 
+                                    new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir esta Marca?');" })
                                 </button>
                             </td>
                         </tr>

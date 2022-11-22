@@ -68,6 +68,7 @@ namespace ASAPARK.Controllers
         {
             Marca marca = new Marca();
             marca.IdMarca = id;
+
             string retorno = marcaNegocios.Excluir(marca);
 
             return RedirectToAction(nameof(ConsultarMarca));

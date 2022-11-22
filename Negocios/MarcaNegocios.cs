@@ -135,7 +135,7 @@ namespace Negocios
             try
             {
                 acessoDadosSqlServer.LimpaParametros();
-                acessoDadosSqlServer.AdicionaParametros("@IdMarcao", marca.IdMarca);
+                acessoDadosSqlServer.AdicionaParametros("@IdMarca", marca.IdMarca);
                 string IdMarca = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspMarcaExcluir").ToString();
                 return IdMarca;
             }
