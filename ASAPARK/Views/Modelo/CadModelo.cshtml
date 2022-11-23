@@ -1,0 +1,61 @@
+﻿@model ObjetoTransferencia.Modelo
+
+@{
+    ViewBag.Title = "CadModelo";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="layout-content">
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Cadastrar Modelo</span>
+
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+        <div class="container" id="cadastrarProd">
+            <form action="" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <br /><br />
+                        @Html.DropDownList("mar", "Escolha a Marca")
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-8" })
+                        @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { placeholder = "Informe o Modelo", @class = "form-control", @id = "DescricaoCarro" } })
+                        @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn btn-outline-primary" style="color:black">
+                    @Html.ActionLink("Voltar", "ConsultarModelo", new { @style = "color:white" })
+                </button>
+                <input type="hidden" id="id" name="id" value="" />
+                <button type="submit" class="btn btn-outline-primary">Salvar</button>
+            </form>
+                <a class="btn btn-outline-primary" href="/Marca/CadMarca" role="button">
+                    <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>                
+                    <span>Cadastrar Marca</span>
+                </a>
+        </div>
+    </section>
+    
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

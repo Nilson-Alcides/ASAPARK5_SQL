@@ -1,4 +1,5 @@
 ﻿using Negocios;
+using ObjetoTransferencia;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -25,7 +26,7 @@ namespace ASAPARK.Controllers
                 {
                     marca.Add(new SelectListItem
                     {
-                        Text = rdr[3].ToString(),
+                        Text = rdr[1].ToString(),
                         Value = rdr[0].ToString()
                     });
                 }
@@ -37,9 +38,35 @@ namespace ASAPARK.Controllers
         }
         ModeloNegocios modeloNegicios = new ModeloNegocios();
         // GET: Modelo
+        // Consutar Modelo
         public ActionResult ConsultarModelo()
         {
             return View(modeloNegicios.carregarModeloGrid());
+        }
+        public ActionResult CadModelo()
+        {
+            carregarMarca();            
+            return View();
+        }
+        //Cadastrar Entrada
+        [HttpPost]
+        public ActionResult CadModelo(Modelo modelo)
+        {
+            carregarMarca();            
+            string IdMarca = Request["mar"];            
+
+            if (ModelState.IsValid)
+            {
+                modelo.Marca = new Marca();
+                modelo.Marca.IdMarca = Convert.ToInt32(IdMarca);
+                string retorno = modeloNegicios.Inserir(modelo);
+
+
+                //TODO Imprementar redirecionamento diferenetes
+                ViewBag.msg = "Entrada cadastrado com sucesso!" +" Seu ID é " + retorno;
+                return RedirectToAction(nameof(ConsultarModelo));
+            }
+            return View();
         }
     }
 }
