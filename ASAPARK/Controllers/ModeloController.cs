@@ -86,5 +86,9 @@ namespace ASAPARK.Controllers
             modeloNegicios.AlterarModelo(modelo);
             return RedirectToAction(nameof(ConsultarModelo));
         }
+        public ActionResult ModeloDetalhes(int id)
+        {
+            return View(modeloNegicios.carregarModeloGrid().Find(modelo => modelo.IdModelo == id));
+        }
     }
 }
