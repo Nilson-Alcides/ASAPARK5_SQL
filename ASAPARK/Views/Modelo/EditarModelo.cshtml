@@ -1,0 +1,59 @@
+﻿@model ObjetoTransferencia.Modelo
+
+@{
+    ViewBag.Title = "EditarModelo";
+}
+
+@using (Html.BeginForm("EditarModelo", "Modelo"))
+{
+    @Html.AntiForgeryToken()
+<section class="layout-content">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="fas fa-caret-right"></i>
+                    <span>Editar Modelo</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="cadastrarFunc">
+        <form action="" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    @Html.LabelFor(model => model.IdModelo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(model => model.IdModelo, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.IdModelo, "", new { @class = "text-danger" })
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group col-md-4">
+                    @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-4" })
+                    @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { placeholder = "Informe um nome", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+                    <div class="invalid-feedback"></div>
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <br /><br />
+                     &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    @Html.DropDownList("mar", "Escolha a Marca")
+                    <div class="invalid-feedback"></div>
+                </div>
+            </div>
+
+            <input type="hidden" id="id" name="id" value="" />
+            <button type="submit" class="btn btn-outline-primary">Atualizar</button>
+
+            <button type="button" class="btn btn-outline-primary" style="color:black">
+                @Html.ActionLink("Voltar", "ConsultarModelo", new { @style = "color:white" })
+            </button>
+        </form>
+    </div>
+</section>
+
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

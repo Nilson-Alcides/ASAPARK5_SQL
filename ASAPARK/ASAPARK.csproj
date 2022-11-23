@@ -265,6 +265,7 @@
     <Content Include="Views\Marca\EditarMarca.cshtml" />
     <Content Include="Views\Modelo\ConsultarModelo.cshtml" />
     <Content Include="Views\Modelo\CadModelo.cshtml" />
+    <Content Include="Views\Modelo\EditarModelo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

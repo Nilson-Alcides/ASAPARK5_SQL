@@ -68,5 +68,23 @@ namespace ASAPARK.Controllers
             }
             return View();
         }
+        
+            public ActionResult EditarModelo(int id)
+        {
+            carregarMarca();
+            return View(modeloNegicios.carregarModeloGrid().Find(modelo => modelo.IdModelo == id));
+
+        }
+        [HttpPost]
+        public ActionResult EditarModelo(Modelo modelo)
+        {
+            carregarMarca();
+            string IdMarca = Request["mar"];
+            modelo.Marca = new Marca();
+            modelo.Marca.IdMarca = Convert.ToInt32(IdMarca);
+
+            modeloNegicios.AlterarModelo(modelo);
+            return RedirectToAction(nameof(ConsultarModelo));
+        }
     }
 }
