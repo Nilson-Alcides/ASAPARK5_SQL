@@ -49,8 +49,6 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@IdMarca", modelo.Marca.IdMarca); 
                 acessoDadosSqlServer.AdicionaParametros("@Descricao", modelo.Descricao);
 
-
-
                 string IdModelo = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspModeloAlterar").ToString();
 
                 return IdModelo;
@@ -79,9 +77,11 @@ namespace Negocios
             {
                 Modelo modelo = new Modelo();
                 modelo.IdModelo = Convert.ToInt32(dataRow["IdModelo"]);
-                modelo.Marca = new Marca();
+                modelo.Marca = new Marca();                
                 modelo.Marca.IdMarca = Convert.ToInt32(dataRow["IdMarca"]);
-                modelo.Descricao = Convert.ToString(dataRow["Descricao"]);
+                modelo.Marca = new Marca();
+                modelo.Marca.Descricao = Convert.ToString(dataRow["Marca"]);
+                modelo.Descricao = Convert.ToString(dataRow["Modelo"]);
 
                 modeloColecao.Add(modelo);
             }
