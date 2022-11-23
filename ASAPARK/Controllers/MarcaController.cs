@@ -13,12 +13,12 @@ namespace ASAPARK.Controllers
         MarcaNegocios marcaNegocios = new MarcaNegocios();
         Marca marca = new Marca();
         // GET: Marca
-        //Listar Pessoa fisica
+        //Cadastrar Marca
         public ActionResult CadMarca()
         {
             return View();
         }
-
+        //Cadastrar Marca
         [HttpPost]
         public ActionResult CadMarca(Marca marca)
         {
@@ -33,7 +33,7 @@ namespace ASAPARK.Controllers
 
 
         }
-        // Cosutar todas Marcas
+        // Consultar todas Marcas
         public ActionResult ConsultarMarca()
         {
             return View(marcaNegocios.carregarMarcaGrid());

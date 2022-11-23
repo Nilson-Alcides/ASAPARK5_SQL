@@ -43,12 +43,13 @@ namespace ASAPARK.Controllers
         {
             return View(modeloNegicios.carregarModeloGrid());
         }
+        //Cadastrar modelo
         public ActionResult CadModelo()
         {
             carregarMarca();            
             return View();
         }
-        //Cadastrar Entrada
+        //Cadastrar Modelo
         [HttpPost]
         public ActionResult CadModelo(Modelo modelo)
         {
@@ -68,13 +69,14 @@ namespace ASAPARK.Controllers
             }
             return View();
         }
-        
-            public ActionResult EditarModelo(int id)
+        //Editar modelo
+        public ActionResult EditarModelo(int id)
         {
             carregarMarca();
             return View(modeloNegicios.carregarModeloGrid().Find(modelo => modelo.IdModelo == id));
 
         }
+        //Editar modelo
         [HttpPost]
         public ActionResult EditarModelo(Modelo modelo)
         {
@@ -86,9 +88,20 @@ namespace ASAPARK.Controllers
             modeloNegicios.AlterarModelo(modelo);
             return RedirectToAction(nameof(ConsultarModelo));
         }
+        // Detalhes modelo
         public ActionResult ModeloDetalhes(int id)
         {
             return View(modeloNegicios.carregarModeloGrid().Find(modelo => modelo.IdModelo == id));
+        }
+        //Excluir Modelo
+        public ActionResult ExcluirModelo(int id)
+        {
+            Modelo modelo = new Modelo();
+            modelo.IdModelo = id;
+
+            string retorno = modeloNegicios.Excluir(modelo);
+
+            return RedirectToAction(nameof(ConsultarModelo));
         }
     }
 }
