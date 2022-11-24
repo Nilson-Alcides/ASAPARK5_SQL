@@ -66,6 +66,31 @@ namespace ASAPARK.Controllers
 
             ViewBag.pre = new SelectList(preco, "Value", "Text");
         }
+        public void carregarModelo()
+        {
+            List<SelectListItem> marca = new List<SelectListItem>();
+            //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
+            //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("uspModeloCarregarGrid", con);
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    marca.Add(new SelectListItem
+                    {
+                        Text = rdr[3].ToString(),
+                        Value = rdr[0].ToString()
+                    });
+                }
+                con.Close();
+
+            }
+
+            ViewBag.mod = new SelectList(marca, "Value", "Text");
+        }
 
         // GET: EntraSaida
         EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
@@ -77,6 +102,7 @@ namespace ASAPARK.Controllers
         //Cadastrar Entrada
         public ActionResult CadastroEntrada()
         {
+            carregarModelo();
             carregarFilial();
             carregarPreco();
             return View();
@@ -85,6 +111,8 @@ namespace ASAPARK.Controllers
         [HttpPost]
         public ActionResult CadastroEntrada(EntradaSaida entradaSaida, string dateTimeEntada)
         {
+            carregarModelo();
+            string IdModelo = Request["mod"];
             carregarFilial();
             carregarPreco();
             string IdPessoa = Request["fil"];
@@ -109,11 +137,13 @@ namespace ASAPARK.Controllers
                 entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
                 entradaSaida.Pessoa = new Pessoa();
                 entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(IdPessoa);
+                entradaSaida.Modelo = new Modelo();
+                entradaSaida.Modelo.IdModelo = Convert.ToInt32(IdModelo);
                 entradaSaida.DataEntrada = Convert.ToDateTime(Data);
                 entradaSaida.HoraEntrada = Convert.ToInt32(HorasEntrada);
                 entradaSaida.MinutoEntrada = Convert.ToInt32(MinutoEntrada);
 
-                string retorno = entradaSaidaNegocios.Inserir(entradaSaida);
+                string retorno = entradaSaidaNegocios.Cadastrar(entradaSaida);
 
 
                 //TODO Imprementar redirecionamento diferenetes
@@ -125,17 +155,17 @@ namespace ASAPARK.Controllers
 
         public ActionResult ConsultarEntrada()
         {
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas());
+            return View(entradaSaidaNegocios.CarregarTodasEntradas());
         }
         public ActionResult ConsultarEntradaDetalhes(int id)
         {
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
         }
         // EDITAR Entrada        
         public ActionResult EditarEntrada(int id)
         {
             carregarPreco();
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
         [HttpPost]

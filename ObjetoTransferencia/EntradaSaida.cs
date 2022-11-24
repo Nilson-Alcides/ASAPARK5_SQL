@@ -20,6 +20,9 @@ namespace ObjetoTransferencia
         public Pessoa Pessoa { get; set; }
 
         [Display(Name = "Código")]
+        public Modelo Modelo { get; set; }
+
+        [Display(Name = "Código")]
         public PessoaJuridica PessoaJuridica { get; set; }
         [Display(Name = "Modelo")]
         public String DescricaoCarro { get; set; }
