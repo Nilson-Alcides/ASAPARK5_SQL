@@ -84,17 +84,17 @@ namespace ASAPARK.Controllers
         public ActionResult ConsultarSaida()
         {
             
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas());
+            return View(entradaSaidaNegocios.CarregarTodasEntradas()); 
         }
         public ActionResult SaidaDetalhes(int id)
         {
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
         }
         // EDITAR SAIDA
         public ActionResult EditarSaida(int id)
         {
             carregarPreco();
-            return View(entradaSaidaNegocios.ConsultarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
         // EDITAR SAIDA

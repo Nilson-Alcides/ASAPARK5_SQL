@@ -18,9 +18,9 @@
                             <span>Detalhes Entrada</span>
                         </li>
                     </ul>
-                    <a class="btn btn-outline-primary" href="/Funcionario/CadastroFuncionario/@Model.Pessoa.IdPessoa" role="button">
-                        <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
-                        <span>Cadastrar Novo Endereço</span>
+                    <a class="btn btn-outline-primary" href="/EntraSaida/CadastroEntrada/@*@Model.Pessoa.IdPessoa*@" role="button">
+                        <span class="fas fa-car-side" title="Cadastro" aria-hidden="true"></span>
+                        <span>Novo Entrada</span>
                     </a>
                 </div>
             </nav>
@@ -84,10 +84,10 @@
 
                     @*__________________________________________FIM ENDEREÇO______________________________________________________*@
                     <button type="button" class="btn btn-outline-primary" style="color:black">
-                        @Html.ActionLink("Voltar", "ConsultarCodigoNome", new { @style = "color:white" })
+                        @Html.ActionLink("Voltar", "ConsultarEntrada", new { @style = "color:white" })
                     </button>
                     <button type="button" class="btn btn-warning" style="color:black">
-                        @Html.ActionLink("Editar", "EditarCliente", new { id = Model.Pessoa.IdPessoa }, new { @style = "color:white" })
+                        @Html.ActionLink("Editar", "EditarEntradaSaida", new { id = Model.Pessoa.IdPessoa }, new { @style = "color:white" })
                     </button>
                 </form>
             </div>

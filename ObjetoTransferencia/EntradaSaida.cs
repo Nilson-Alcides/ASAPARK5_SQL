@@ -27,6 +27,7 @@ namespace ObjetoTransferencia
         [Display(Name = "Modelo")]
         public String DescricaoCarro { get; set; }
         [Display(Name = "Placa")]
+        [Required(ErrorMessage = "A placa é obrigatório.")]
         public String Placa { get; set; }
         [Display(Name = "Data")]
         public DateTime DataEntrada { get; set; }

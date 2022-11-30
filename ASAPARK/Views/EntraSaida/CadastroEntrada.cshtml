@@ -43,18 +43,38 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <br /><br />                        
+                        <br /><br />
                         @Html.DropDownList("mod", "Escolha a Modelo")
                         <div class="invalid-feedback"></div>
                     </div>
+                    @*<div class="form-group col-md-4">
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" checked="checked" name="Opcaoplaca" value="1" id="PlacaMercosul">
+                            <span class="form-check-label"> Placa Mercosul</span>
+                        </label>
 
-                    @*<div class="form-group col-md-5">
-                        @Html.LabelFor(model => model.DescricaoCarro, htmlAttributes: new { @class = "control-label col-md-5" })
-                        @Html.EditorFor(model => model.DescricaoCarro, new { htmlAttributes = new { placeholder = "Informe o Modelo", @class = "form-control", @id = "DescricaoCarro" } })
-                        @Html.ValidationMessageFor(model => model.DescricaoCarro, "", new { @class = "text-danger" })
+                        <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Opcaoplaca" value="2" id="PlacaNacional">
+                            <span class="form-check-label"> Placa Nacional</span>
+                        </label>
+                        
                         <div class="invalid-feedback"></div>
                     </div>*@
 
+                    @*<div class="form-group col-md-5">
+            @Html.LabelFor(model => model.DescricaoCarro, htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.EditorFor(model => model.DescricaoCarro, new { htmlAttributes = new { placeholder = "Informe o Modelo", @class = "form-control", @id = "DescricaoCarro" } })
+            @Html.ValidationMessageFor(model => model.DescricaoCarro, "", new { @class = "text-danger" })
+            <div class="invalid-feedback"></div>
+        </div>*@
+
+                    
+                    @*<div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control", @id = "Placa" } })
+                        @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>*@
                     <div class="form-group col-md-3">
                         @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
                         @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control", @id = "Placa" } })
@@ -76,7 +96,9 @@
 
 <script>
     $(document).ready(function () {
-        $("#Placa").inputmask("mask", { "mask": "AAA-9A99" });
+        $("#Placa").inputmask("mask", { "mask": "AAA-9*99" });
+        
+          
         
     });
 </script>
