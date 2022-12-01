@@ -173,6 +173,7 @@ namespace Negocios
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
+                    entradaSaida.Preco = new Preco();
                     entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
 
                     entradaSaidaColecao.Add(entradaSaida);
@@ -259,6 +260,7 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@HoraSaida", entradaSaida.HoraSaida);
                 acessoDadosSqlServer.AdicionaParametros("@MinutoSaida", entradaSaida.MinutoSaida);
                 acessoDadosSqlServer.AdicionaParametros("@ValorTotal", entradaSaida.ValorTotal);
+
 
                 string IdEntrada = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSaidaAlterar").ToString();
 

@@ -2,6 +2,7 @@
 using ObjetoTransferencia;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace ASAPARK.Controllers
     public class SaidaController : Controller
     {
         //Carrega Filial
+        
 
         public void carregarFilial()
         {
@@ -88,12 +90,15 @@ namespace ASAPARK.Controllers
         }
         public ActionResult SaidaDetalhes(int id)
         {
+            
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
         }
         // EDITAR SAIDA
         public ActionResult EditarSaida(int id)
         {
             carregarPreco();
+            entradaSaida.Preco = new Preco();
+            string IdPreco = Convert.ToString(entradaSaida.Preco.IdPreco);
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
@@ -106,12 +111,22 @@ namespace ASAPARK.Controllers
             //Double ValorPagar;
 
             carregarPreco();
+            entradaSaida.Preco = new Preco();
+            
             string IdPreco = Request["pre"];
 
 
             precoColecao = precoNegocios.ConsultarPorCodigo(Convert.ToInt32(IdPreco));
-            //
+
+            entradaSaida.Preco = new Preco();            
+            var PrecoInicial = entradaSaida.Preco.Valor;
+
+
+
             //entradaSaida.Preco.Valor = ValorInicial;
+
+
+
 
             string hora_atual_saida = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
             //string Data_atual = DateTime.Now.ToString();
@@ -153,6 +168,8 @@ namespace ASAPARK.Controllers
 
             string horasfinais = Convert.ToDateTime(horas + ":" + minutos).ToString("HH:mm");
             int HorasTotais = Convert.ToInt32(horasfinais.Substring(0, 2));
+           
+            
 
             DateTime Data = DateTime.Now;
             // EntradaSaida entradaSaida = new EntradaSaida();
@@ -162,9 +179,10 @@ namespace ASAPARK.Controllers
             entradaSaida.DataSaida = Convert.ToDateTime(Data);
             // entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
             entradaSaida.Preco = new Preco();
+            entradaSaida.Preco.Valor = ValorInicial;            
 
-            
-               
+
+
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
             entradaSaida.ValorTotal = ValorInicial * HorasTotais;

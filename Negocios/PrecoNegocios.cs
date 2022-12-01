@@ -132,7 +132,7 @@ namespace Negocios
 
                 precoColecao.Add(preco);
             }
-            return precoColecao;
+            return precoColecao; 
         }
     }
 }
