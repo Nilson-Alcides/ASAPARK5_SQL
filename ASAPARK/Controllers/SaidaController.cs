@@ -15,14 +15,14 @@ namespace ASAPARK.Controllers
     public class SaidaController : Controller
     {
         //Carrega Filial
-        
+
 
         public void carregarFilial()
         {
             List<SelectListItem> filial = new List<SelectListItem>();
             //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
             //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
-            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=ESTASA;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("uspFilialCarregarGrid", con);
@@ -74,7 +74,7 @@ namespace ASAPARK.Controllers
         EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
         EntradaSaida entradaSaida = new EntradaSaida();
         Double ValorPagar;
-        Double ValorInicial;
+        Double PrecoInicial;
         double SegundaHora = 3;
         PrecoNegocios precoNegocios = new PrecoNegocios();
         PrecoColecao precoColecao = new PrecoColecao();
@@ -85,59 +85,47 @@ namespace ASAPARK.Controllers
         }
         public ActionResult ConsultarSaida()
         {
-            
-            return View(entradaSaidaNegocios.CarregarTodasEntradas()); 
+
+            return View(entradaSaidaNegocios.CarregarTodasEntradas());
         }
         public ActionResult SaidaDetalhes(int id)
         {
-            
+
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
         }
         // EDITAR SAIDA
         public ActionResult EditarSaida(int id)
         {
-            carregarPreco();
-            entradaSaida.Preco = new Preco();
-            string IdPreco = Convert.ToString(entradaSaida.Preco.IdPreco);
+            
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
         // EDITAR SAIDA
 
         [HttpPost]
-        public ActionResult EditarSaida(EntradaSaida entradaSaida)
+        public ActionResult EditarSaida(EntradaSaida entradaSaida, System.Web.Mvc.FormCollection formCollection)
         {
             //Variavel do sistema
             //Double ValorPagar;
 
-            carregarPreco();
+            //carregarPreco();
             entradaSaida.Preco = new Preco();
-            
-            string IdPreco = Request["pre"];
-
-
-            precoColecao = precoNegocios.ConsultarPorCodigo(Convert.ToInt32(IdPreco));
-
-            entradaSaida.Preco = new Preco();            
-            var PrecoInicial = entradaSaida.Preco.Valor;
-
-
-
-            //entradaSaida.Preco.Valor = ValorInicial;
-
-
+            //entradaSaida.Preco.Valor = HttpContext.Request.Form["nome"];
+            var PrecoInicial = formCollection["Preco.Valor"];
+            entradaSaida.Preco.Valor = Convert.ToDouble(PrecoInicial);
 
 
             string hora_atual_saida = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
             //string Data_atual = DateTime.Now.ToString();
-            string h1 = entradaSaida.DataEntrada.ToString();
+
+            //string h1 = entradaSaida.DataEntrada.ToString();
             string h2 = hora_atual_saida;
             int mm = 60;
 
 
 
-            int HorasEntrada = Convert.ToInt32(h1.Substring(0, 2));
-            int MinutoEntrada = Convert.ToInt32(h1.Substring(3, 2));
+            int HorasEntrada = entradaSaida.HoraEntrada; //Convert.ToInt32(h1.Substring(0, 2));
+            int MinutoEntrada = entradaSaida.MinutoEntrada; //Convert.ToInt32(h1.Substring(3, 2));
 
             int HorasSaida = Convert.ToInt32(h2.Substring(0, 2));
             int MinutoSaida = Convert.ToInt32(h2.Substring(3, 2));
@@ -168,8 +156,8 @@ namespace ASAPARK.Controllers
 
             string horasfinais = Convert.ToDateTime(horas + ":" + minutos).ToString("HH:mm");
             int HorasTotais = Convert.ToInt32(horasfinais.Substring(0, 2));
-           
-            
+
+
 
             DateTime Data = DateTime.Now;
             // EntradaSaida entradaSaida = new EntradaSaida();
@@ -178,37 +166,30 @@ namespace ASAPARK.Controllers
             // entradaSaida.DescricaoCarro = Convert.ToString(txtDescricaoCarro.Text).ToUpper();
             entradaSaida.DataSaida = Convert.ToDateTime(Data);
             // entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
-            entradaSaida.Preco = new Preco();
-            entradaSaida.Preco.Valor = ValorInicial;            
+            // entradaSaida.Preco = new Preco();
+            //entradaSaida.Preco.Valor = ValorInicial;            
 
 
 
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
-            entradaSaida.ValorTotal = ValorInicial * HorasTotais;
+            entradaSaida.ValorTotal = Convert.ToDouble(PrecoInicial) * HorasTotais;
 
             //################################# VALOR A PAGAR POR 1 HORAS #################################
-            if (minutos >= 3 && HorasTotais <= 5.99)//1.99)
+            if (minutos >= 3 && HorasTotais <= 1.99)
             {
-                
 
-              IdPreco ="1";
-
-                
-
-                precoColecao = precoNegocios.ConsultarPorCodigo(Convert.ToInt32(IdPreco));
-                //
-                entradaSaida.Preco.Valor = ValorInicial;
+                // entradaSaida.Preco.Valor = ValorInicial;
 
 
 
-                ValorPagar = ValorInicial;
-                var ValorTotal = Convert.ToString( entradaSaida.ValorTotal);
+                ValorPagar = Convert.ToDouble(PrecoInicial);
+                var ValorTotal = Convert.ToString(entradaSaida.ValorTotal);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
                 MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
             }
 
-            
+
 
             EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
             string retorno = entradaSaidaNegocios.AlterarSaida(entradaSaida);
@@ -466,7 +447,7 @@ namespace ASAPARK.Controllers
             // modelEmprestimo carrinho = Session["Carrinho"] != null ? (modelEmprestimo)Session["Carrinho"] : new modelEmprestimo();
             EntradaSaidaItens carrinho = Session["Carrinho"] != null ? (EntradaSaidaItens)Session["Carrinho"] : new EntradaSaidaItens();
 
-            var entrada = entradaSaidaNegocios.Consultar(id,null);
+            var entrada = entradaSaidaNegocios.Consultar(id, null);
 
             codigo = id.ToString();
 
@@ -483,7 +464,7 @@ namespace ASAPARK.Controllers
                 itemSaida.MinutoEntrada = entrada[0].MinutoEntrada;
                 itemSaida.Preco = new Preco();
                 itemSaida.Preco.Valor = entrada[0].Preco.Valor;
-                
+
                 // List<modelItem> x = carrinho.ItensPedido.FindAll(l => l.nomeLivro == itemEmprestimo.nomeLivro);
                 List<EntradaSaida> x = carrinho.ItensEntradaSaida.FindAll(l => l.Placa == itemSaida.Placa);
 
