@@ -28,8 +28,8 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@IdModelo", entradaSaida.Modelo.IdModelo);
                 acessoDadosSqlServer.AdicionaParametros("@DataEntrada", entradaSaida.DataEntrada);
                 acessoDadosSqlServer.AdicionaParametros("@HoraEntrada", entradaSaida.HoraEntrada);
-                acessoDadosSqlServer.AdicionaParametros("@MinutoEntrada", entradaSaida.MinutoEntrada);                
-                
+                acessoDadosSqlServer.AdicionaParametros("@MinutoEntrada", entradaSaida.MinutoEntrada);
+
                 string IdEntraSaida = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspEntradaCadastrar").ToString();
 
                 return IdEntraSaida;
@@ -50,7 +50,7 @@ namespace Negocios
         {
             try
             {
-                acessoDadosSqlServer.LimpaParametros();                
+                acessoDadosSqlServer.LimpaParametros();
                 acessoDadosSqlServer.AdicionaParametros("@Placa", entradaSaida.Placa);
                 acessoDadosSqlServer.AdicionaParametros("@IdPreco", entradaSaida.Preco.IdPreco);
                 acessoDadosSqlServer.AdicionaParametros("@IdPessoa", entradaSaida.Pessoa.IdPessoa);
@@ -144,7 +144,7 @@ namespace Negocios
 
                 DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
                     CommandType.StoredProcedure, "uspConsultarTodasEntada");
-                
+
 
 
                 foreach (DataRow DataRow in dataTable.Rows)
@@ -248,6 +248,34 @@ namespace Negocios
                 throw new Exception("erro inserçãogenerico " + ex.Message);
             }
 
+        }
+        public string UpdateSaida(EntradaSaida entradaSaida)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimpaParametros();
+                acessoDadosSqlServer.AdicionaParametros("@IdEntraSaida", entradaSaida.IdEntraSaida);
+                acessoDadosSqlServer.AdicionaParametros("@DataSaida", entradaSaida.DataSaida);
+                acessoDadosSqlServer.AdicionaParametros("@IdModelo", entradaSaida.Modelo.IdModelo);
+                acessoDadosSqlServer.AdicionaParametros("@HoraSaida", entradaSaida.HoraSaida);
+                acessoDadosSqlServer.AdicionaParametros("@MinutoSaida", entradaSaida.MinutoSaida);
+                acessoDadosSqlServer.AdicionaParametros("@ValorTotal", entradaSaida.ValorTotal);
+
+
+                string IdEntrada = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSaidaUpdate").ToString();
+
+                return IdEntrada;
+            }
+            catch (SqlException ex)
+            {
+
+                throw new Exception("erro alteração banco" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("erro inserçãogenerico " + ex.Message);
+            }
         }
         public string AlterarSaida(EntradaSaida entradaSaida)
         {

@@ -22,7 +22,7 @@ namespace ASAPARK.Controllers
             List<SelectListItem> filial = new List<SelectListItem>();
             //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
             //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
-            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=ESTASA;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("uspFilialCarregarGrid", con);
@@ -96,7 +96,7 @@ namespace ASAPARK.Controllers
         // EDITAR SAIDA
         public ActionResult EditarSaida(int id)
         {
-            
+            carregarPreco();
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
@@ -176,23 +176,28 @@ namespace ASAPARK.Controllers
             entradaSaida.ValorTotal = Convert.ToDouble(PrecoInicial) * HorasTotais;
 
             //################################# VALOR A PAGAR POR 1 HORAS #################################
-            if (minutos >= 3 && HorasTotais <= 1.99)
+            if (minutos >= 3 && HorasTotais <= 10.99)//1.99)
             {
-
-                // entradaSaida.Preco.Valor = ValorInicial;
-
-
-
                 ValorPagar = Convert.ToDouble(PrecoInicial);
                 var ValorTotal = Convert.ToString(entradaSaida.ValorTotal);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
                 MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
             }
+            //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
+            if (HorasTotais <= 0 && minutos <= 3)
+            {
 
+                ValorPagar = Convert.ToDouble(PrecoInicial) - Convert.ToDouble(PrecoInicial);
+                entradaSaida.ValorTotal = ValorPagar;
+                var ValorTotal = Convert.ToString(entradaSaida.ValorTotal);
+                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+            }
 
 
             EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
-            string retorno = entradaSaidaNegocios.AlterarSaida(entradaSaida);
+            string retorno = entradaSaidaNegocios.UpdateSaida(entradaSaida);
             MessageBox.Show("Saida Cadastrada com sucesso ");
             return RedirectToAction(nameof(ConsultarSaida));
             //try
@@ -440,46 +445,5 @@ namespace ASAPARK.Controllers
 
         }
 
-        public static string codigo;
-
-        public ActionResult AdicionarSaidaCarrinho(int id)
-        {
-            // modelEmprestimo carrinho = Session["Carrinho"] != null ? (modelEmprestimo)Session["Carrinho"] : new modelEmprestimo();
-            EntradaSaidaItens carrinho = Session["Carrinho"] != null ? (EntradaSaidaItens)Session["Carrinho"] : new EntradaSaidaItens();
-
-            var entrada = entradaSaidaNegocios.Consultar(id, null);
-
-            codigo = id.ToString();
-
-            if (entrada != null)
-            {
-                var itemSaida = new EntradaSaida();
-
-                itemSaida.ItemSaidaID = Guid.NewGuid();
-                itemSaida.IdEntraSaida = Convert.ToInt32(codigo);
-                itemSaida.DescricaoCarro = entrada[0].DescricaoCarro;
-                itemSaida.Placa = entrada[0].Placa;
-                itemSaida.DataEntrada = entrada[0].DataEntrada;
-                itemSaida.HoraEntrada = entrada[0].HoraEntrada;
-                itemSaida.MinutoEntrada = entrada[0].MinutoEntrada;
-                itemSaida.Preco = new Preco();
-                itemSaida.Preco.Valor = entrada[0].Preco.Valor;
-
-                // List<modelItem> x = carrinho.ItensPedido.FindAll(l => l.nomeLivro == itemEmprestimo.nomeLivro);
-                List<EntradaSaida> x = carrinho.ItensEntradaSaida.FindAll(l => l.Placa == itemSaida.Placa);
-
-                if (x.Count != 0)
-                {
-                    return Content("<script language='javascript' type='text/javascript'>alert('Livro já incluído no empréstimo'); location.href='Carrinho';</script>");
-                }
-                else
-                {
-                    carrinho.ItensEntradaSaida.Add(itemSaida);
-                }
-                Session["Carrinho"] = carrinho;
-            }
-
-            return RedirectToAction("Carrinho");
-        }
     }
 }
