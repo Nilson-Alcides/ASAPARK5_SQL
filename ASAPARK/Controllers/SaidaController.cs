@@ -22,7 +22,7 @@ namespace ASAPARK.Controllers
             List<SelectListItem> filial = new List<SelectListItem>();
             //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
             //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
-            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=ESTASA;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("uspFilialCarregarGrid", con);
@@ -173,13 +173,15 @@ namespace ASAPARK.Controllers
 
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
-            entradaSaida.ValorTotal = Convert.ToDouble(PrecoInicial) * HorasTotais;
+            //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
 
             //################################# VALOR A PAGAR POR 1 HORAS #################################
             if (minutos >= 3 && HorasTotais <= 10.99)//1.99)
             {
+
                 ValorPagar = Convert.ToDouble(PrecoInicial);
-                var ValorTotal = Convert.ToString(entradaSaida.ValorTotal);
+                entradaSaida.ValorTotal = ValorPagar;
+                var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
                 MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
             }
@@ -189,7 +191,7 @@ namespace ASAPARK.Controllers
 
                 ValorPagar = Convert.ToDouble(PrecoInicial) - Convert.ToDouble(PrecoInicial);
                 entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(entradaSaida.ValorTotal);
+                var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
                 MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
