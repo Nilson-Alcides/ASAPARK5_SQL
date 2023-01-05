@@ -176,7 +176,7 @@ namespace ASAPARK.Controllers
             //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
 
             //################################# VALOR A PAGAR POR 1 HORAS #################################
-            if (minutos >= 3 && HorasTotais <= 10.99)//1.99)
+            if (minutos >= 3 && HorasTotais <= 1.99)
             {
 
                 ValorPagar = Convert.ToDouble(PrecoInicial);
@@ -190,6 +190,27 @@ namespace ASAPARK.Controllers
             {
 
                 ValorPagar = Convert.ToDouble(PrecoInicial) - Convert.ToDouble(PrecoInicial);
+                entradaSaida.ValorTotal = ValorPagar;
+                var ValorTotal = Convert.ToString(ValorPagar);
+                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+            }
+            //################################# VALOR A PAGAR POR 2 HORAS #################################
+            if (HorasTotais >= 2 && HorasTotais <= 2.99)
+            {
+
+                PrecoNegocios precoNegocios = new PrecoNegocios();
+
+                int IdPreco = 2;
+
+                PrecoColecao precoColecao = new PrecoColecao();
+
+                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                var ValorHora = precoColecao[0].Valor;
+
+
+                ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
