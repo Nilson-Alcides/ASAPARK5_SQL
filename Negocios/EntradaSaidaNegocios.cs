@@ -155,11 +155,10 @@ namespace Negocios
                     entradaSaida.Placa = Convert.ToString(DataRow["Placa"]);
                     entradaSaida.DataEntrada = Convert.ToDateTime(DataRow["DataEntrada"]);
                     entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
-                    entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);
-                    entradaSaida.Preco = new Preco();
-                    entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
+                    entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);                    
                     entradaSaida.Modelo = new Modelo();
                     entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["Descricao"]);
+
                     entradaSaida.PessoaJuridica = new PessoaJuridica();
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
@@ -170,10 +169,13 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
-
+                    
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
-                    entradaSaida.Preco = new Preco();
+                    
+                    entradaSaida.Preco = new Preco();                    
+                    entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
+                    entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
                     entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
 
                     entradaSaidaColecao.Add(entradaSaida);
@@ -214,6 +216,8 @@ namespace Negocios
                     entradaSaida.DataEntrada = Convert.ToDateTime(DataRow["DataEntrada"]);
                     entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
                     entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
                     entradaSaida.Preco = new Preco();
                     entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
                     entradaSaida.Modelo = new Modelo();
