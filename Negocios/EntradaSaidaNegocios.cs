@@ -157,7 +157,8 @@ namespace Negocios
                     entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
                     entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);                    
                     entradaSaida.Modelo = new Modelo();
-                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["Descricao"]);
+                    entradaSaida.Modelo.IdModelo = Convert.ToInt32(DataRow["IdModelo"]);
+                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["DescricaoMod"]);
 
                     entradaSaida.PessoaJuridica = new PessoaJuridica();
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
@@ -177,6 +178,7 @@ namespace Negocios
                     entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
                     entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
                     entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+                    
 
                     entradaSaidaColecao.Add(entradaSaida);
                 }
@@ -221,7 +223,136 @@ namespace Negocios
                     entradaSaida.Preco = new Preco();
                     entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
                     entradaSaida.Modelo = new Modelo();
-                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["Descricao"]);
+                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["DescricaoMod"]);
+                    entradaSaida.PessoaJuridica = new PessoaJuridica();
+                    entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
+                    entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
+                    entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
+                    entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
+                    entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
+                    entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
+                    entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
+                    entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+
+                    entradaSaida.Pessoa = new Pessoa();
+                    entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
+                    entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+                    entradaSaida.ValorTotal = Convert.ToDouble(DataRow["ValorTotal"]);
+
+                    entradaSaidaColecao.Add(entradaSaida);
+                }
+                return entradaSaidaColecao;
+            }
+            catch (SqlException ex)
+            {
+
+                throw new Exception("erro pesquizar banco" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("erro inserçãogenerico " + ex.Message);
+            }
+
+        }
+        //COSULTA PARA IMPRIMIR
+        public EntradaSaidaColecao ConsultarSaidaImpresao()
+        {
+            try
+            {
+                EntradaSaidaColecao entradaSaidaColecao = new EntradaSaidaColecao();
+
+                acessoDadosSqlServer.LimpaParametros();
+
+                DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
+                    CommandType.StoredProcedure, "uspSaidaConsultarImpresao");
+                //uspConsultarTodasEntada
+
+
+                foreach (DataRow DataRow in dataTable.Rows)
+                {
+                    EntradaSaida entradaSaida = new EntradaSaida();
+                    entradaSaida.IdEntraSaida = Convert.ToInt32(DataRow["IdEntraSaida"]);
+                    entradaSaida.DescricaoCarro = Convert.ToString(DataRow["DescricaoCarro"]);
+                    entradaSaida.Placa = Convert.ToString(DataRow["Placa"]);
+                    entradaSaida.DataEntrada = Convert.ToDateTime(DataRow["DataEntrada"]);
+                    entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
+                    entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);
+                    entradaSaida.DataSaida = Convert.ToDateTime(DataRow["DataSaida"]);
+                    entradaSaida.HoraSaida = Convert.ToInt32(DataRow["HoraSaida"]);
+                    entradaSaida.MinutoSaida = Convert.ToInt32(DataRow["MinutoSaida"]);
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
+
+                    entradaSaida.Modelo = new Modelo();
+                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["DescricaoMod"]);
+                    entradaSaida.PessoaJuridica = new PessoaJuridica();
+                    entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
+                    entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
+                    entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
+                    entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
+                    entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
+                    entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
+                    entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
+                    entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+
+                    entradaSaida.Pessoa = new Pessoa();
+                    entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
+                    entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+                    entradaSaida.ValorTotal = Convert.ToDouble(DataRow["ValorTotal"]);
+
+                    entradaSaidaColecao.Add(entradaSaida);
+                }
+                return entradaSaidaColecao;
+            }
+            catch (SqlException ex)
+            {
+
+                throw new Exception("erro pesquizar banco" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("erro inserçãogenerico " + ex.Message);
+            }
+
+        }
+        //COSULTA PARA IMPRIMIR
+        public EntradaSaidaColecao ConsultarTodasSaida()
+        {
+            try
+            {
+                EntradaSaidaColecao entradaSaidaColecao = new EntradaSaidaColecao();
+
+                acessoDadosSqlServer.LimpaParametros();
+
+                DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
+                    CommandType.StoredProcedure, "uspSaidaConsultarTodas");
+                //uspConsultarTodasEntada
+
+
+                foreach (DataRow DataRow in dataTable.Rows)
+                {
+                    EntradaSaida entradaSaida = new EntradaSaida();
+                    entradaSaida.IdEntraSaida = Convert.ToInt32(DataRow["IdEntraSaida"]);
+                    entradaSaida.DescricaoCarro = Convert.ToString(DataRow["DescricaoCarro"]);
+                    entradaSaida.Placa = Convert.ToString(DataRow["Placa"]);
+                    entradaSaida.DataEntrada = Convert.ToDateTime(DataRow["DataEntrada"]);
+                    entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
+                    entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);
+                    entradaSaida.DataSaida = Convert.ToDateTime(DataRow["DataSaida"]);
+                    entradaSaida.HoraSaida = Convert.ToInt32(DataRow["HoraSaida"]);
+                    entradaSaida.MinutoSaida = Convert.ToInt32(DataRow["MinutoSaida"]);
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
+                    entradaSaida.Modelo = new Modelo();
+                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["DescricaoMod"]);
                     entradaSaida.PessoaJuridica = new PessoaJuridica();
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
@@ -259,12 +390,12 @@ namespace Negocios
             {
                 acessoDadosSqlServer.LimpaParametros();
                 acessoDadosSqlServer.AdicionaParametros("@IdEntraSaida", entradaSaida.IdEntraSaida);
-                acessoDadosSqlServer.AdicionaParametros("@DataSaida", entradaSaida.DataSaida);
-                acessoDadosSqlServer.AdicionaParametros("@IdModelo", entradaSaida.Modelo.IdModelo);
+                acessoDadosSqlServer.AdicionaParametros("@DataSaida", entradaSaida.DataSaida);                
                 acessoDadosSqlServer.AdicionaParametros("@HoraSaida", entradaSaida.HoraSaida);
                 acessoDadosSqlServer.AdicionaParametros("@MinutoSaida", entradaSaida.MinutoSaida);
+                acessoDadosSqlServer.AdicionaParametros("@IdModelo", entradaSaida.Modelo.IdModelo);
                 acessoDadosSqlServer.AdicionaParametros("@ValorTotal", entradaSaida.ValorTotal);
-
+                acessoDadosSqlServer.AdicionaParametros("@Status", entradaSaida.Status);
 
                 string IdEntrada = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspSaidaUpdate").ToString();
 

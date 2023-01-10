@@ -106,16 +106,13 @@ namespace ASAPARK.Controllers
         [HttpPost]
         public ActionResult EditarSaida(EntradaSaida entradaSaida, System.Web.Mvc.FormCollection formCollection)
         {
-            //Variavel do sistema
-            //Double ValorPagar;
-             
-            //carregarPreco();
+
+
+            entradaSaida.Status = "Completo";
             entradaSaida.Preco = new Preco();
-            //entradaSaida.Preco.Valor = HttpContext.Request.Form["nome"];
-              var PrecoInicial = formCollection["Preco.Valor"];
+             var PrecoInicial = formCollection["Preco.Valor"];
              var IdPrecoIn = formCollection["Preco.IdPreco"].Substring(0, 1);
             entradaSaida.Preco.Valor = Convert.ToDouble(PrecoInicial);
-            
             entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPrecoIn);
             
 
@@ -162,11 +159,15 @@ namespace ASAPARK.Controllers
             int HorasTotais = Convert.ToInt32(horasfinais.Substring(0, 2));
 
 
+           
 
             DateTime Data = DateTime.Now;
             entradaSaida.DataSaida = Convert.ToDateTime(Data);
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
+
+            
+
             //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
             //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
             if (HorasTotais <= 0 && minutos <= 3 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
@@ -192,6 +193,7 @@ namespace ASAPARK.Controllers
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
                 MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+            
             }
             
             //################################# VALOR A PAGAR POR 2 HORAS #################################
@@ -253,7 +255,25 @@ namespace ASAPARK.Controllers
 
             }
             //################################# VALOR A PAGAR PELA DIÁRIA #################################
-            if (Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6 
+            if (Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6
+                && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+            {
+                PrecoNegocios precoNegocios = new PrecoNegocios();
+                IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                PrecoColecao precoColecao = new PrecoColecao();
+                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                var ValorHora = precoColecao[0].Valor;
+
+                ValorPagar = Convert.ToDouble(ValorHora);
+                entradaSaida.ValorTotal = ValorPagar;
+                var ValorTotal = Convert.ToString(ValorPagar);
+                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+            }
+            //################################# VALOR A PAGAR PELA DIÁRIA #################################
+            if (HorasTotais >= 5 && Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6 
                 && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
             {
                 PrecoNegocios precoNegocios = new PrecoNegocios();
@@ -338,263 +358,71 @@ namespace ASAPARK.Controllers
                 MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
+            
+            //Session["Imprimir"] = entradaSaida;
+
             EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
             string retorno = entradaSaidaNegocios.UpdateSaida(entradaSaida);
+            
 
-            //IMPRIMINDO
-            //    //################################# IMPRIMINDO #################################
-           // DialogResult Resposta = MessageBox.Show("Deseja Imprimir", "Imprimir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-           //if (Resposta == DialogResult.Yes)
-           // {
-           //      printPreviewDialogEntrada.ShowDialog();
-           // }
+            MessageBox.Show("Saida Cadastrada com sucesso ");            
+            return RedirectToAction(nameof(Impressao));
+        }
 
-            MessageBox.Show("Saida Cadastrada com sucesso ");
-            return RedirectToAction(nameof(ConsultarSaida));
-            //try
-            //{
+        // VARIAVEIS PARA PEENCHER O IMPRESSÂO
+        string NomeFantasia;
+        string RazaoSocial;
+        string Telefone;
+        string CNPJ;
+        string Celular;
+        string Email;
+        string Endereco;
+        string Numero;
+        string Bairro;
+        string CEP;
+        string Cidade = "São Paulo";
+        string DataEntrada;
 
-            //    
+        public ActionResult Impressao()
+        {
 
-            //    //################################# VALOR A PAGAR POR 1 HORAS #################################
-            //    if (minutos >= 3 && HorasTotais <= 1.99)
-            //    {
-            //        ValorPagar = Convert.ToDouble(txtValor.Text);
-            //        txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //        txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //        MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-            //    }
-
-            //    //################################# VALOR A PAGAR POR 2 HORAS #################################
-            //    if (HorasTotais >= 2 && HorasTotais <= 2.99)
-            //    {
-            //        dgwPrincipal.Visible = true;
-            //        try
-            //        {
-            //            PrecoNegocios precoNegocios = new PrecoNegocios();
-
-            //            int IdPreco = 2;
-
-            //            PrecoColecao precoColecao = new PrecoColecao();
-
-            //            precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-
-            //            dgwPrincipal.DataSource = null;
-            //            dgwPrincipal.DataSource = precoColecao;
-
-            //            dgwPrincipal.Update();
-            //            dgwPrincipal.Refresh();
-
-            //            if (dgwPrincipal.RowCount <= 0)
-            //            {
-            //                MessageBox.Show("Menhum produto localizado");
-            //                return;
-            //            }
-
-            //            txtValorSaida.Text = dgwPrincipal.CurrentRow.Cells[2].Value.ToString();
-
-            //            double ValorSaida;
-            //            double ValorEntrada;
-            //            ValorSaida = Convert.ToDouble(txtValorSaida.Text);
-            //            ValorEntrada = Convert.ToDouble(txtValor.Text);
-
-            //            ValorPagar = ValorSaida + ValorEntrada;
-
-            //            txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //            txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //            MessageBox.Show("Valor à Pagar  por 2 horas " + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-
-            //        }
-            //        catch (Exception ex)
-            //        {
-
-            //            MessageBox.Show("Erro ao somar valor " + ex.Message);
-            //        }
-            //    }
-
-            //    //################################# VALOR A PAGAR POR 3 HORAS #################################
-            //    if (HorasTotais >= 3 && HorasTotais <= 3.99)
-            //    {
-            //        dgwPrincipal.Visible = true;
-            //        try
-            //        {
-            //            PrecoNegocios precoNegocios = new PrecoNegocios();
-
-            //            int IdPreco = 3;
-
-            //            PrecoColecao precoColecao = new PrecoColecao();
-
-            //            precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-
-            //            dgwPrincipal.DataSource = null;
-            //            dgwPrincipal.DataSource = precoColecao;
-
-            //            dgwPrincipal.Update();
-            //            dgwPrincipal.Refresh();
-
-            //            if (dgwPrincipal.RowCount <= 0)
-            //            {
-            //                MessageBox.Show("Menhum produto localizado");
-            //                return;
-            //            }
-
-            //            txtValorSaida.Text = dgwPrincipal.CurrentRow.Cells[2].Value.ToString();
-
-            //            double ValorSaida;
-            //            double ValorEntrada;
-            //            ValorSaida = Convert.ToDouble(txtValorSaida.Text);
-            //            ValorEntrada = Convert.ToDouble(txtValor.Text);
-
-            //            ValorPagar = ValorSaida + ValorEntrada;
-
-            //            txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //            txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //            MessageBox.Show("Valor à Pagar  por 3 horas " + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            //        }
-            //        catch (Exception ex)
-            //        {
-
-            //            MessageBox.Show("Erro ao somar valor " + ex.Message);
-            //        }
-            //    }
-
-            //    //################################# VALOR A PAGAR POR 4 HORAS #################################
-            //    if (HorasTotais >= 4 && HorasTotais <= 4.99)
-            //    {
-            //        dgwPrincipal.Visible = true;
-            //        try
-            //        {
-            //            PrecoNegocios precoNegocios = new PrecoNegocios();
-
-            //            int IdPreco = 4;
-
-            //            PrecoColecao precoColecao = new PrecoColecao();
-
-            //            precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-
-            //            dgwPrincipal.DataSource = null;
-            //            dgwPrincipal.DataSource = precoColecao;
-
-            //            dgwPrincipal.Update();
-            //            dgwPrincipal.Refresh();
-
-            //            if (dgwPrincipal.RowCount <= 0)
-            //            {
-            //                MessageBox.Show("Menhum produto localizado");
-            //                return;
-            //            }
-
-            //            txtValorSaida.Text = dgwPrincipal.CurrentRow.Cells[2].Value.ToString();
-
-            //            double ValorSaida;
-            //            double ValorEntrada;
-            //            ValorSaida = Convert.ToDouble(txtValorSaida.Text);
-            //            ValorEntrada = Convert.ToDouble(txtValor.Text);
-
-            //            ValorPagar = ValorSaida + ValorEntrada;
-
-            //            txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //            txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //            MessageBox.Show("Valor à Pagar  por 4 horas " + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-            //        }
-            //        catch (Exception ex)
-            //        {
-
-            //            MessageBox.Show("Erro ao somar valor " + ex.Message);
-            //        }
-            //    }
-            //    //################################# VALOR A PAGAR PELA DIÁRIA #################################
-            //    if (HorasTotais >= 5)
-            //    {
-            //        dgwPrincipal.Visible = true;
-            //        try
-            //        {
-            //            PrecoNegocios precoNegocios = new PrecoNegocios();
-
-            //            int IdPreco = 5;
-
-            //            PrecoColecao precoColecao = new PrecoColecao();
-
-            //            precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-
-            //            dgwPrincipal.DataSource = null;
-            //            dgwPrincipal.DataSource = precoColecao;
-
-            //            dgwPrincipal.Update();
-            //            dgwPrincipal.Refresh();
-
-            //            if (dgwPrincipal.RowCount <= 0)
-            //            {
-            //                MessageBox.Show("Menhum produto localizado");
-            //                return;
-            //            }
-
-            //            txtValorSaida.Text = dgwPrincipal.CurrentRow.Cells[2].Value.ToString();
-
-            //            double ValorSaida;
-            //            double ValorEntrada;
-            //            ValorSaida = Convert.ToDouble(txtValorSaida.Text);
-            //            ValorEntrada = Convert.ToDouble(txtValor.Text);
-
-            //            ValorPagar = ValorSaida;
-
-            //            txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //            txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //            MessageBox.Show("Valor à Pagar  pela diária é " + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-            //        }
-            //        catch (Exception ex)
-            //        {
-
-            //            MessageBox.Show("Erro ao somar valor " + ex.Message);
-            //        }
-            //    }
-            //    //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
-            //    if (HorasTotais <= 0 && minutos <= 3)
-            //    {
-
-            //        ValorPagar = Convert.ToDouble(HorasTotais * HorasTotais);
-            //        txtValorTotal.Text = Convert.ToString(ValorPagar);
-            //        txtValorTotal.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-            //        MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            //    }
-            //    //############################
-            //    DateTime Data = DateTime.Now;
-            //    EntradaSaida entradaSaida = new EntradaSaida();
-            //    /// entradaSaida.IdEntraSaida = Convert.ToInt32(txtCodEntrada.Text);
-            //    entradaSaida.IdEntraSaida = Convert.ToInt32(txtIdEntradaSaida.Text);
-            //    entradaSaida.DescricaoCarro = Convert.ToString(txtDescricaoCarro.Text).ToUpper();
-            //    entradaSaida.DataSaida = Convert.ToDateTime(Data);
-            //    // entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
-            //    // entradaSaida.Preco = new Preco();
-            //    entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
-            //    entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
-            //    entradaSaida.ValorTotal = Convert.ToDouble(ValorPagar);
-
-            //    EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
-            //    string retorno = entradaSaidaNegocios.AlterarSaida(entradaSaida);
-
-            //    MessageBox.Show("Saida Cadastrada com sucesso ");
-
-            //    //IMPRIMINDO
-            //    //################################# IMPRIMINDO #################################
-            //    DialogResult Resposta = MessageBox.Show("Deseja Imprimir", "Imprimir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //    if (Resposta == DialogResult.Yes)
-            //    {
-            //        printPreviewDialogEntrada.ShowDialog();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show("Erro ao Cadastrada Saida " + ex.Message);
-            //}
-
-
+            return View(entradaSaidaNegocios.ConsultarTodasSaida());
 
         }
+        public ActionResult ImpressaoDetalhes(int id)
+        {
+
+            return View(entradaSaidaNegocios.ConsultarTodasSaida().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+
+        }
+        //[HttpPost]
+        //public ActionResult Impressao(EntradaSaida entradaSaida)
+        //{
+        //    entradaSaida.PessoaJuridica = new PessoaJuridica();
+        //    NomeFantasia = entradaSaida.PessoaJuridica.NomeFantasia;
+        //    CNPJ = entradaSaida.PessoaJuridica.CNPJ;
+        //    RazaoSocial = entradaSaida.PessoaJuridica.RazaoSocial;
+        //    Telefone = entradaSaida.PessoaJuridica.Telefone;
+        //    Celular = entradaSaida.PessoaJuridica.Celular;
+        //    Endereco = entradaSaida.PessoaJuridica.Endereco;
+        //    Bairro = entradaSaida.PessoaJuridica.Bairro;
+        //    CEP = entradaSaida.PessoaJuridica.CEP;
+        //    Numero = entradaSaida.PessoaJuridica.Numero;
+        //    ViewBag.Cidade = Cidade;
+        //    return View();
+
+        //}
+
+        //        <div class="container droppedHover">
+        //    <div class="row">
+        //        <div class="span6">
+        //            <button class="btn btn-lg btn-block btn-success glyphicon glyphicon-print" type="submit" onClick="window.print()">  Impressão</button>
+        //            <a href = "@Url.Action("Index", "MenuPrincipal")" class="btn btn-lg btn-block btn-warning glyphicon glyphicon-hand-left">
+        //                Retorno
+        //            </a>
+        //        </div>
+        //    </div>
+        //</div>
 
     }
 }

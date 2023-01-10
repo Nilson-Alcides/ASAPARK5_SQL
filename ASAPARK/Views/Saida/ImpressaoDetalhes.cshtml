@@ -1,0 +1,81 @@
+﻿@model ObjetoTransferencia.EntradaSaida
+
+
+
+
+<section class="layout-content">
+
+    
+    <div class="container" id="code_prod_detail" style="margin-top: 50px">
+        <div class="card">
+            <div class="row no-gutters">
+                @*
+                    <aside class="col-sm-5 border-right">
+                        <article class="gallery-wrap">
+                            <div class="img-big-wrap">
+                                <div> <a href="@Model.Imagem" data-fancybox=""><img src="@Model.Imagem"></a></div>
+                            </div>
+
+                        </article>
+                    </aside>
+                *@
+                <aside class="col-sm-7">
+                    <article class="p-5">
+                        <h3 class="title mb-3 ">@Model.PessoaJuridica.RazaoSocial</h3>
+                        <h3 class="title mb-3 ">@Model.PessoaJuridica.NomeFantasia</h3>
+                        <h3 class="title mb-3 ">CNPJ: @Model.PessoaJuridica.CNPJ</h3>
+                        <div class="mb-3">
+                            <var class="price h3 text-warning">
+                                Valor Total = <span class="currency"> R$</span><span class="num">@Model.ValorTotal.ToString("C2")</span>
+                            </var>
+                            <span></span>
+                        </div>
+                        <dl>
+                            <dt>@*Codigo*@</dt>
+                            <dd>@*@Model.IdEntraSaida*@</dd>
+                        </dl>
+
+                        <dl class="row">
+                            <dt class="col-sm-3">Codigo</dt>
+                            <dd class="col-sm-9">@Model.IdEntraSaida </dd>
+                            <dt class="col-sm-3">Veiculo</dt>
+                            <dd class="col-sm-9">@Model.Modelo.Descricao </dd>
+                            <dt class="col-sm-3">Placa</dt>
+                            <dd class="col-sm-9">@Model.Placa </dd>
+                            <dt class="col-sm-3">Endereço</dt>
+                            <dd class="col-sm-9">
+                                @Model.PessoaJuridica.Endereco CEP: @Model.PessoaJuridica.CEP
+                                N° @Model.PessoaJuridica.Numero
+                            </dd>
+
+                            <dt class="col-sm-3">Telefone</dt>
+                            <dd class="col-sm-9">@Model.PessoaJuridica.Telefone </dd>
+
+                            <dt class="col-sm-3">Celular</dt>
+                            <dd class="col-sm-9">@Model.PessoaJuridica.Celular</dd>
+
+                            <dt class="col-sm-3">Data Entrada</dt>
+                            <dd class="col-sm-9">@Model.DataEntrada.ToString("dd/MM/yyyy")</dd>
+
+                            <dt class="col-sm-3">Data Saída</dt>
+                            <dd class="col-sm-9">@Model.DataSaida.ToString("dd/MM/yyyy")</dd>
+                        </dl>
+                        <span style="font-weight: bold">Por favor não perca o recibo de entrada</span>
+                    </article>
+                    <script>window.print();</script>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <button type="button" class="btn btn-outline-primary" style="color:black">
+        @Html.ActionLink("Voltar", "ListarProdutos", new { @style = "color:white" })
+    </button>
+    <button type="button" class="btn btn-warning" style="color:black">
+        @Html.ActionLink("Editar", "EditarProduto", new { id = Model.IdEntraSaida }, new { @style = "color:white" })
+    </button>
+    
+
+</section>
+

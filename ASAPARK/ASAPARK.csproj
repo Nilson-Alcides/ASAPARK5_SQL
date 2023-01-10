@@ -267,6 +267,8 @@
     <Content Include="Views\Modelo\CadModelo.cshtml" />
     <Content Include="Views\Modelo\EditarModelo.cshtml" />
     <Content Include="Views\Modelo\ModeloDetalhes.cshtml" />
+    <Content Include="Views\Saida\Impressao.cshtml" />
+    <Content Include="Views\Saida\ImpressaoDetalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

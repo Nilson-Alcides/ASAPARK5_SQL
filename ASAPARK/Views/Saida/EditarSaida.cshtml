@@ -88,20 +88,36 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        @*@Html.LabelFor(model => model.ValorTotal, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Preco.IdPreco, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
-                            @Html.ValidationMessageFor(model => model.Preco.IdPreco, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.PessoaJuridica.NomeFantasia, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.Modelo.IdModelo, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.CNPJ, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.RazaoSocial, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Telefone, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Celular, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Endereco, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Bairro, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.CEP, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Numero, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        @Html.EditorFor(model => model.PessoaJuridica.Endereco, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+
+                    </div>
+                    
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.ValorTotal, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Preco.IdPreco, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                                @Html.ValidationMessageFor(model => model.Preco.IdPreco, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </div>
-                </div>
-                <input type="hidden" id="id" name="id" value="" />
-                <button type="submit" class="btn btn-outline-warning">Confirmar</button>
+                    <input type="hidden" id="id" name="id" value="" />
+                    <button type="submit" class="btn btn-outline-warning">Confirmar</button>
 
-                <button type="button" class="btn btn-outline-primary" style="color:black">
-                    @Html.ActionLink("Voltar", "ConsultarSaida", new { @style = "color:white" })
-                </button>
-            </form>
+                    <button type="button" class="btn btn-outline-primary" style="color:black">
+                        @Html.ActionLink("Voltar", "ConsultarSaida", new { @style = "color:white" })
+                    </button>
+</form>
         </div>
     </section>
 
