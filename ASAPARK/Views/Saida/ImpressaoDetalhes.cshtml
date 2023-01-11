@@ -1,11 +1,22 @@
 ﻿@model ObjetoTransferencia.EntradaSaida
 
+@{
+    ViewBag.Title = "ImpressaoDetalhes";
 
+}
+@{
+    Layout = "~/Views/Print/_Layout.cshtml";
+}
 
 
 <section class="layout-content">
 
-    
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            
+           
+        </div>
+    </nav>
     <div class="container" id="code_prod_detail" style="margin-top: 50px">
         <div class="card">
             <div class="row no-gutters">
@@ -26,7 +37,7 @@
                         <h3 class="title mb-3 ">CNPJ: @Model.PessoaJuridica.CNPJ</h3>
                         <div class="mb-3">
                             <var class="price h3 text-warning">
-                                Valor Total = <span class="currency"> R$</span><span class="num">@Model.ValorTotal.ToString("C2")</span>
+                                Valor Total = <span class="currency"></span><span class="num">@Model.ValorTotal.ToString("C2")</span>
                             </var>
                             <span></span>
                         </div>
@@ -39,7 +50,7 @@
                             <dt class="col-sm-3">Codigo</dt>
                             <dd class="col-sm-9">@Model.IdEntraSaida </dd>
                             <dt class="col-sm-3">Veiculo</dt>
-                            <dd class="col-sm-9">@Model.Modelo.Descricao </dd>
+                            <dd class="col-sm-9">@Model.Modelo.Descricao </dd><br/>
                             <dt class="col-sm-3">Placa</dt>
                             <dd class="col-sm-9">@Model.Placa </dd>
                             <dt class="col-sm-3">Endereço</dt>
@@ -55,14 +66,15 @@
                             <dd class="col-sm-9">@Model.PessoaJuridica.Celular</dd>
 
                             <dt class="col-sm-3">Data Entrada</dt>
-                            <dd class="col-sm-9">@Model.DataEntrada.ToString("dd/MM/yyyy")</dd>
+                            <dd class="col-sm-9">@Model.DataEntrada.ToString("dd/MM/yyyy H:mm")</dd>
 
                             <dt class="col-sm-3">Data Saída</dt>
-                            <dd class="col-sm-9">@Model.DataSaida.ToString("dd/MM/yyyy")</dd>
+                            <dd class="col-sm-9">@Model.DataSaida.ToString("dd/MM/yyyy H:mm")</dd>
                         </dl>
-                        <span style="font-weight: bold">Por favor não perca o recibo de entrada</span>
+                        <span style="font-weight: bold">Guarde este tick consigo ele é a segurança do seu veiculo. Não deixe o mesmo no interior do carro.
+                        <p>Não nos responsabilizamos por objetos deixados dentro do veículo e também por falhas mecanicas.
+                            </p></span>
                     </article>
-                    <script>window.print();</script>
                 </aside>
             </div>
         </div>
@@ -70,12 +82,10 @@
     <br />
     <br />
     <button type="button" class="btn btn-outline-primary" style="color:black">
-        @Html.ActionLink("Voltar", "ListarProdutos", new { @style = "color:white" })
-    </button>
-    <button type="button" class="btn btn-warning" style="color:black">
-        @Html.ActionLink("Editar", "EditarProduto", new { id = Model.IdEntraSaida }, new { @style = "color:white" })
+        @Html.ActionLink("Voltar", "Impressao")
     </button>
     
+    <script>window.print();</script>
 
 </section>
 

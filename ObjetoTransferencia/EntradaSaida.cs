@@ -29,10 +29,17 @@ namespace ObjetoTransferencia
         [Display(Name = "Placa")]
         [Required(ErrorMessage = "A placa é obrigatório.")]
         public String Placa { get; set; }
+        
         [Display(Name = "Data")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataEntrada { get; set; }
+
         [Display(Name = "Data Saida")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataSaida { get; set; }
+
         [Display(Name = "Hora")]
         public int HoraEntrada { get; set; }
         [Display(Name = "Minuto")]

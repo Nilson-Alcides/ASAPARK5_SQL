@@ -269,6 +269,9 @@
     <Content Include="Views\Modelo\ModeloDetalhes.cshtml" />
     <Content Include="Views\Saida\Impressao.cshtml" />
     <Content Include="Views\Saida\ImpressaoDetalhes.cshtml" />
+    <Content Include="Views\Print\_ViewStart.cshtml" />
+    <Content Include="Views\Print\_Layout.cshtml" />
+    <Content Include="Views\Saida\CosultaPordata.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

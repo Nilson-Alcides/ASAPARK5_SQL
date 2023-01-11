@@ -134,6 +134,87 @@ namespace Negocios
             }
 
         }
+
+       
+        public EntradaSaidaColecao CarregarTodasSaidaPorData()
+        {
+            
+            try
+            {   
+                EntradaSaidaColecao entradaSaidaColecao = new EntradaSaidaColecao();
+                DateTime dataAtual = DateTime.Now;
+
+
+                acessoDadosSqlServer.LimpaParametros();
+                acessoDadosSqlServer.AdicionaParametros("@DataSaida", dataAtual);
+
+                DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
+                 CommandType.StoredProcedure, "uspSaidaConsultarProData");
+                //CommandType.Text, "SELECT * FROM tblEntradaSaida AS Ent INNER JOIN" +
+                //" tblPreco AS Pr ON Ent.IdPreco = Pr.IdPreco " +
+                //"left JOIN tblPessoaJuridica AS Pes ON Pes.IdPessoaJuridica = Ent.IdPessoa" +
+                //"  left JOIN tblModelo as Mo ON ent.IdModelo = Mo.IdModelo" +
+                ////       -- FORMATO DA DATA = '10/11/2022'
+                //" WHERE Ent.MinutoSaida IS NOT NULL AND" +
+                //" CAST(Ent.DataSaida AS DATE) = " + dataAtual + "");
+
+
+                foreach (DataRow DataRow in dataTable.Rows)
+                {
+                    EntradaSaida entradaSaida = new EntradaSaida();
+                    entradaSaida.IdEntraSaida = Convert.ToInt32(DataRow["IdEntraSaida"]);
+                    entradaSaida.DescricaoCarro = Convert.ToString(DataRow["DescricaoCarro"]);
+                    entradaSaida.Placa = Convert.ToString(DataRow["Placa"]);
+                    entradaSaida.DataEntrada = Convert.ToDateTime(DataRow["DataEntrada"]);
+                    entradaSaida.HoraEntrada = Convert.ToInt32(DataRow["HoraEntrada"]);
+                    entradaSaida.MinutoEntrada = Convert.ToInt32(DataRow["MinutoEntrada"]);
+
+                    entradaSaida.DataSaida = Convert.ToDateTime(DataRow["DataSaida"]);
+                    entradaSaida.HoraSaida = Convert.ToInt32(DataRow["HoraSaida"]);
+                    entradaSaida.MinutoSaida = Convert.ToInt32(DataRow["MinutoSaida"]);
+
+                    entradaSaida.Modelo = new Modelo();
+                    entradaSaida.Modelo.IdModelo = Convert.ToInt32(DataRow["IdModelo"]);
+                    entradaSaida.Modelo.Descricao = Convert.ToString(DataRow["DescricaoMod"]);
+
+                    entradaSaida.PessoaJuridica = new PessoaJuridica();
+                    entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
+                    entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
+                    entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
+                    entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
+                    entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
+                    entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
+                    entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
+                    entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+
+                    entradaSaida.Pessoa = new Pessoa();
+                    entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
+
+                    entradaSaida.Preco = new Preco();
+                    entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
+                    entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
+                    entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+
+
+                    entradaSaidaColecao.Add(entradaSaida);
+                }
+                return entradaSaidaColecao;
+            }
+            catch (SqlException ex)
+            {
+
+                throw new Exception("erro pesquizar banco" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("erro inserçãogenerico " + ex.Message);
+            }
+
+        }
+
+
         public EntradaSaidaColecao CarregarTodasEntradas()
         {
             try
@@ -367,6 +448,7 @@ namespace Negocios
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
                     entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+                    entradaSaida.ValorTotal = Convert.ToDouble(DataRow["ValorTotal"]);
 
                     entradaSaidaColecao.Add(entradaSaida);
                 }

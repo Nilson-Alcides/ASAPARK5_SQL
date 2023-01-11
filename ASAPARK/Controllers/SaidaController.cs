@@ -369,20 +369,15 @@ namespace ASAPARK.Controllers
             return RedirectToAction(nameof(Impressao));
         }
 
-        // VARIAVEIS PARA PEENCHER O IMPRESSÂO
-        string NomeFantasia;
-        string RazaoSocial;
-        string Telefone;
-        string CNPJ;
-        string Celular;
-        string Email;
-        string Endereco;
-        string Numero;
-        string Bairro;
-        string CEP;
-        string Cidade = "São Paulo";
-        string DataEntrada;
+       
+        
+        
+        public ActionResult CosultaPordata()
+        {
+            
+            return View(entradaSaidaNegocios.CarregarTodasSaidaPorData());
 
+        }
         public ActionResult Impressao()
         {
 

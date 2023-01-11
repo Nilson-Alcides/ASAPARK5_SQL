@@ -6,104 +6,104 @@
 
 @*<h2>Impressao</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemSaidaID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IdEntraSaida)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DescricaoCarro)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Placa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataEntrada)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataSaida)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HoraEntrada)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MinutoEntrada)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HoraSaida)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MinutoSaida)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ValorTotal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ValorInicial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ItemSaidaID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdEntraSaida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescricaoCarro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Placa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataEntrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataSaida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraEntrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MinutoEntrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraSaida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MinutoSaida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorTotal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorInicial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemSaidaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEntraSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoCarro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinutoEntrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinutoSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>*@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemSaidaID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEntraSaida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoCarro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataSaida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoraEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinutoEntrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoraSaida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinutoSaida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorInicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    </table>*@
 
 <section class="layout-content">
 
@@ -133,6 +133,8 @@
                         <th>Data</th>
                         <th>Valor Inicial</th>
                         <th>Valor Total</th>
+                        <th>Data Saida</th>
+
 
                         <th>Ação</th>
                     </tr>
@@ -148,6 +150,7 @@
                         <td>@entrada.DataEntrada</td>
                         <td>@entrada.Preco.Valor.ToString("C2")</td>
                         <td>@entrada.ValorTotal.ToString("C2")</td>
+                        <td>@entrada.DataSaida</td>
 
 
                         <td colspan="2">
