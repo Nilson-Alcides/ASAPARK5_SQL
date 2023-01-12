@@ -80,10 +80,7 @@ namespace ASAPARK.Controllers
         PrecoNegocios precoNegocios = new PrecoNegocios();
         PrecoColecao precoColecao = new PrecoColecao();
         // GET: Saida
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
         public ActionResult ConsultarSaida()
         {
 
@@ -101,8 +98,7 @@ namespace ASAPARK.Controllers
             return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
 
         }
-        // EDITAR SAIDA
-        
+        // EDITAR SAIDA        
         [HttpPost]
         public ActionResult EditarSaida(EntradaSaida entradaSaida, System.Web.Mvc.FormCollection formCollection)
         {
@@ -122,8 +118,6 @@ namespace ASAPARK.Controllers
             //string h1 = entradaSaida.DataEntrada.ToString();
             string h2 = hora_atual_saida;
             int mm = 60;
-
-
 
             int HorasEntrada = entradaSaida.HoraEntrada; //Convert.ToInt32(h1.Substring(0, 2));
             int MinutoEntrada = entradaSaida.MinutoEntrada; //Convert.ToInt32(h1.Substring(3, 2));
@@ -158,19 +152,14 @@ namespace ASAPARK.Controllers
             string horasfinais = Convert.ToDateTime(horas + ":" + minutos).ToString("HH:mm");
             int HorasTotais = Convert.ToInt32(horasfinais.Substring(0, 2));
 
-
-           
-
             DateTime Data = DateTime.Now;
             entradaSaida.DataSaida = Convert.ToDateTime(Data);
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
 
-            
-
             //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
             //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
-            if (HorasTotais <= 0 && minutos <= 3 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
+            if (HorasTotais <= 0 && minutos <= 2 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
             {
                 IdPreco = Convert.ToInt32(IdPrecoIn);
@@ -183,7 +172,7 @@ namespace ASAPARK.Controllers
 
             }
             //################################# VALOR A PAGAR POR 1 HORAS #################################
-            if (minutos >= 3 && HorasTotais <= 1.99 && Convert.ToInt32(IdPrecoIn) != 5 && Convert.ToInt32(IdPrecoIn) != 6
+            if (minutos >= 2 && HorasTotais <= 1.99 && Convert.ToInt32(IdPrecoIn) != 5 && Convert.ToInt32(IdPrecoIn) != 6
                 && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
             {
                 IdPreco = Convert.ToInt32(IdPrecoIn);
@@ -203,7 +192,7 @@ namespace ASAPARK.Controllers
 
                 PrecoNegocios precoNegocios = new PrecoNegocios();
 
-                IdPreco = Convert.ToInt32(IdPrecoIn);
+                IdPreco = 2;
 
                 PrecoColecao precoColecao = new PrecoColecao();
 
@@ -215,7 +204,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+                //MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             //################################# VALOR A PAGAR POR 3 HORAS #################################
@@ -223,7 +212,7 @@ namespace ASAPARK.Controllers
                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
             {
                 PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
+                IdPreco = 3;
 
                 PrecoColecao precoColecao = new PrecoColecao();
                 precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
@@ -233,7 +222,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             //################################# VALOR A PAGAR POR 4 HORAS #################################
@@ -241,7 +230,7 @@ namespace ASAPARK.Controllers
                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
             {
                 PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
+                IdPreco = 4;
 
                 PrecoColecao precoColecao = new PrecoColecao();
                 precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
@@ -251,7 +240,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             //################################# VALOR A PAGAR PELA DIÁRIA #################################
@@ -269,7 +258,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             //################################# VALOR A PAGAR PELA DIÁRIA #################################
@@ -287,7 +276,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             if (Convert.ToInt32(IdPrecoIn) == 6 && Convert.ToInt32(IdPrecoIn) != 7
@@ -304,7 +293,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             if (Convert.ToInt32(IdPrecoIn) == 7 && Convert.ToInt32(IdPrecoIn) != 7
@@ -321,7 +310,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             if (Convert.ToInt32(IdPrecoIn) == 8 && Convert.ToInt32(IdPrecoIn) != 7
@@ -338,7 +327,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             if (Convert.ToInt32(IdPrecoIn) == 9 && Convert.ToInt32(IdPrecoIn) != 7
@@ -355,7 +344,7 @@ namespace ASAPARK.Controllers
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
 
             }
             
@@ -366,7 +355,7 @@ namespace ASAPARK.Controllers
             
 
             MessageBox.Show("Saida Cadastrada com sucesso ");            
-            return RedirectToAction(nameof(Impressao));
+            return RedirectToAction(nameof(CosultaPordataAtual));
         }
 
        

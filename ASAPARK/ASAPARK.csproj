@@ -272,6 +272,9 @@
     <Content Include="Views\Print\_ViewStart.cshtml" />
     <Content Include="Views\Print\_Layout.cshtml" />
     <Content Include="Views\Saida\CosultaPordataAtual.cshtml" />
+    <Content Include="Views\EntraSaida\ImpressaoEntrada.cshtml" />
+    <Content Include="Views\EntraSaida\ImpressaoEntradaDetalhes.cshtml" />
+    <Content Include="Views\EntraSaida\ReimpressaoEntrada.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

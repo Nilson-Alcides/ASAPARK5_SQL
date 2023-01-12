@@ -145,12 +145,33 @@ namespace ASAPARK.Controllers
 
                 string retorno = entradaSaidaNegocios.Cadastrar(entradaSaida);
 
+                
 
                 //TODO Imprementar redirecionamento diferenetes
                 ViewBag.msg = "Entrada cadastrado com sucesso!";
-                return RedirectToAction(nameof(ConsultarEntrada));
+                return RedirectToAction(nameof(ImpressaoEntrada));
             }
             return View();
+        }
+       
+        //IMORIMIR ENTRADA
+        public ActionResult ImpressaoEntrada()
+        {
+
+            return View(entradaSaidaNegocios.ConsultarEntradaImpresao());
+
+        }
+        //IMPRIMIR DETALHES ENTRADA
+        public ActionResult ImpressaoEntradaDetalhes(int id)
+        {
+
+            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
+
+        }
+        //REIMPRIMIR DETALHES ENTRADA
+        public ActionResult ReimpressaoEntrada()
+        {
+            return View(entradaSaidaNegocios.CarregarTodasEntradas());
         }
 
         public ActionResult ConsultarEntrada()
