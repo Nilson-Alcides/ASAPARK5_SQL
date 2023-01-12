@@ -112,7 +112,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <i class="fas fa-caret-right"></i>
-                    <span>Lista de Entradas</span>
+                    <span>Lista Saida @DateTime.Now.ToString("dd/MM/yy")</span>
                 </li>
             </ul>
             <a class="btn btn-outline-primary" href="/EntraSaida/CadastroEntrada" role="button">
@@ -129,11 +129,10 @@
                     <tr>
                         <th>Código</th>
                         <th>Modelo</th>
-                        <th>Placa</th>
-                        <th>Data</th>
+                        <th>Placa</th>                        
                         <th>Valor Inicial</th>
                         <th>Valor Total</th>
-                        <th>Data Saida</th>
+                        <th>Data Saída</th>
 
 
                         <th>Ação</th>
@@ -146,27 +145,25 @@
                     <tr>
                         <td>@entrada.IdEntraSaida </td>
                         <td>@entrada.Modelo.Descricao</td>
-                        <td>@entrada.Placa</td>
-                        <td>@entrada.DataEntrada</td>
+                        <td>@entrada.Placa</td>                        
                         <td>@entrada.Preco.Valor.ToString("C2")</td>
                         <td>@entrada.ValorTotal.ToString("C2")</td>
-                        <td>@entrada.DataSaida</td>
-
+                        <td>@entrada.DataSaida.ToString("dd/MM/yy")</td>
 
                         <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "ImpressaoDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                            <button type="button" class="btn btn-info btn-sm fas fa-print">
+                                @Html.ActionLink("Imprimir", "ImpressaoDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
                             </button>
 
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
+                            @*<button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
                                 @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
-                            </button>
+                            </button>*@
 
 
-                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
+                            @*<button type="button" class="btn btn-danger btn-sm da" style="color:black">
                                 @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
                                 new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
-                            </button>
+                            </button>*@
                         </td>
                     </tr>
                     }

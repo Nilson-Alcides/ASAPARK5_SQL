@@ -372,10 +372,10 @@ namespace ASAPARK.Controllers
        
         
         
-        public ActionResult CosultaPordata()
+        public ActionResult CosultaPordataAtual()
         {
             
-            return View(entradaSaidaNegocios.CarregarTodasSaidaPorData());
+            return View(entradaSaidaNegocios.CarregarTodasSaidaPorDataAtual());
 
         }
         public ActionResult Impressao()

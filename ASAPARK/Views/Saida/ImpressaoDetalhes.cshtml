@@ -30,11 +30,16 @@
                         </article>
                     </aside>
                 *@
+                
                 <aside class="col-sm-7">
+                    <span>Ticket Saída N° @Model.IdEntraSaida</span>
                     <article class="p-5">
-                        <h3 class="title mb-3 ">@Model.PessoaJuridica.RazaoSocial</h3>
-                        <h3 class="title mb-3 ">@Model.PessoaJuridica.NomeFantasia</h3>
-                        <h3 class="title mb-3 ">CNPJ: @Model.PessoaJuridica.CNPJ</h3>
+                        @*<h3 class="title mb-3 ">@Model.PessoaJuridica.RazaoSocial</h3>*@
+                        <h3 style="font-size: 13px;" class="title mb-3">@Model.PessoaJuridica.NomeFantasia</h3>
+                        <h3 style="font-size: 13px;" class="title mb-3 ">CNPJ: @Model.PessoaJuridica.CNPJ</h3>
+                        <h3 style="font-size: 13px;" class="title mb-3 ">E-MAIL: @Model.PessoaJuridica.Email</h3>
+                        <h3 style="font-size: 13px;" class="title mb-3">FONE: @Model.PessoaJuridica.Telefone - CEL: @Model.PessoaJuridica.Telefone </h3>
+                        <h3 style="font-size: 13px;" class="title mb-3 ">END: @Model.PessoaJuridica.Endereco N°@Model.PessoaJuridica.Numero</h3>
                         <div class="mb-3">
                             <var class="price h3 text-warning">
                                 Valor Total = <span class="currency"></span><span class="num">@Model.ValorTotal.ToString("C2")</span>
@@ -46,24 +51,12 @@
                             <dd>@*@Model.IdEntraSaida*@</dd>
                         </dl>
 
-                        <dl class="row">
-                            <dt class="col-sm-3">Codigo</dt>
-                            <dd class="col-sm-9">@Model.IdEntraSaida </dd>
+                        <dl class="row">                            
                             <dt class="col-sm-3">Veiculo</dt>
-                            <dd class="col-sm-9">@Model.Modelo.Descricao </dd><br/>
+                            <dd class="col-sm-9">@Model.Modelo.Descricao </dd>
+                            
                             <dt class="col-sm-3">Placa</dt>
-                            <dd class="col-sm-9">@Model.Placa </dd>
-                            <dt class="col-sm-3">Endereço</dt>
-                            <dd class="col-sm-9">
-                                @Model.PessoaJuridica.Endereco CEP: @Model.PessoaJuridica.CEP
-                                N° @Model.PessoaJuridica.Numero
-                            </dd>
-
-                            <dt class="col-sm-3">Telefone</dt>
-                            <dd class="col-sm-9">@Model.PessoaJuridica.Telefone </dd>
-
-                            <dt class="col-sm-3">Celular</dt>
-                            <dd class="col-sm-9">@Model.PessoaJuridica.Celular</dd>
+                            <dd class="col-sm-9">@Model.Placa </dd>                            
 
                             <dt class="col-sm-3">Data Entrada</dt>
                             <dd class="col-sm-9">@Model.DataEntrada.ToString("dd/MM/yyyy H:mm")</dd>
@@ -71,9 +64,10 @@
                             <dt class="col-sm-3">Data Saída</dt>
                             <dd class="col-sm-9">@Model.DataSaida.ToString("dd/MM/yyyy H:mm")</dd>
                         </dl>
-                        <span style="font-weight: bold">Guarde este tick consigo ele é a segurança do seu veiculo. Não deixe o mesmo no interior do carro.
-                        <p>Não nos responsabilizamos por objetos deixados dentro do veículo e também por falhas mecanicas.
-                            </p></span>
+                        <span style="font-weight: bold">
+                            @Model.PessoaJuridica.MSG1
+                            <p>@Model.PessoaJuridica.MSG2</p>
+                        </span>
                     </article>
                 </aside>
             </div>

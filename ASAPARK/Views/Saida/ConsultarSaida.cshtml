@@ -31,7 +31,7 @@
                         <th>Modelo</th>
                         <th>Placa</th>
                         <th>Data</th>
-                        <th>Valor</th>
+                        <th>Valor de entrada</th>
 
                         <th>Ação</th>
                     </tr>
@@ -49,19 +49,11 @@
 
 
                         <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "SaidaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                            <button type="button" class="btn btn-warning btn-sm">
+                                @Html.ActionLink("Baixar", "SaidaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
                             </button>
 
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
-                            </button>
-
-
-                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
-                                @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
-                                new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
-                            </button>
+                            
                         </td>
                     </tr>
                     }

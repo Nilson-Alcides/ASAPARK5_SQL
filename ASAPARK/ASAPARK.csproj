@@ -271,7 +271,7 @@
     <Content Include="Views\Saida\ImpressaoDetalhes.cshtml" />
     <Content Include="Views\Print\_ViewStart.cshtml" />
     <Content Include="Views\Print\_Layout.cshtml" />
-    <Content Include="Views\Saida\CosultaPordata.cshtml" />
+    <Content Include="Views\Saida\CosultaPordataAtual.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

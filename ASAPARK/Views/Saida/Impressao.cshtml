@@ -151,19 +151,19 @@
 
 
                         <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "ImpressaoDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                            <button type="button" class="btn btn-info btn-sm fas fa-print">
+                                @Html.ActionLink("Imprimir", "ImpressaoDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
                             </button>
 
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
+                            @*<button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
                                 @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
-                            </button>
+                            </button>*@
 
 
-                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
+                            @*<button type="button" class="btn btn-danger btn-sm da" style="color:black">
                                 @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
                                 new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
-                            </button>
+                            </button>*@
                         </td>
                     </tr>
                     }

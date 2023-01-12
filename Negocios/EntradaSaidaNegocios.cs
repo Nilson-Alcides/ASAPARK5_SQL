@@ -15,7 +15,8 @@ namespace Negocios
     public class EntradaSaidaNegocios
     {
         AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
-
+        
+        //CADASTRO DE ENTRADA DESKTOP
         public string Inserir(EntradaSaida entradaSaida)
         {
             try
@@ -46,6 +47,7 @@ namespace Negocios
             }
 
         }
+        //CADASTRO DE ENTRADA ASP
         public string Cadastrar(EntradaSaida entradaSaida)
         {
             try
@@ -75,7 +77,7 @@ namespace Negocios
             }
 
         }
-
+        //COSULTA TODAS ENTRADA POR PLACA E CODIGO
         public EntradaSaidaColecao Consultar(int? idEntrada, string placa)
         {
             try
@@ -107,12 +109,15 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+                    //entradaSaida.PessoaJuridica.MSG1 = Convert.ToString(DataRow["MSG1"]);
+                    //entradaSaida.PessoaJuridica.MSG2 = Convert.ToString(DataRow["MSG2"]);
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
@@ -135,8 +140,8 @@ namespace Negocios
 
         }
 
-       
-        public EntradaSaidaColecao CarregarTodasSaidaPorData()
+        //COSULTA TODAS SAIDA POR DATA ATUAL
+        public EntradaSaidaColecao CarregarTodasSaidaPorDataAtual()
         {
             
             try
@@ -149,14 +154,7 @@ namespace Negocios
                 acessoDadosSqlServer.AdicionaParametros("@DataSaida", dataAtual);
 
                 DataTable dataTable = acessoDadosSqlServer.ExcutaConsulta(
-                 CommandType.StoredProcedure, "uspSaidaConsultarProData");
-                //CommandType.Text, "SELECT * FROM tblEntradaSaida AS Ent INNER JOIN" +
-                //" tblPreco AS Pr ON Ent.IdPreco = Pr.IdPreco " +
-                //"left JOIN tblPessoaJuridica AS Pes ON Pes.IdPessoaJuridica = Ent.IdPessoa" +
-                //"  left JOIN tblModelo as Mo ON ent.IdModelo = Mo.IdModelo" +
-                ////       -- FORMATO DA DATA = '10/11/2022'
-                //" WHERE Ent.MinutoSaida IS NOT NULL AND" +
-                //" CAST(Ent.DataSaida AS DATE) = " + dataAtual + "");
+                 CommandType.StoredProcedure, "uspSaidaConsultarDiaAtual");              
 
 
                 foreach (DataRow DataRow in dataTable.Rows)
@@ -181,12 +179,15 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+                    //entradaSaida.PessoaJuridica.MSG1 = Convert.ToString(DataRow["MSG1"]);
+                    //entradaSaida.PessoaJuridica.MSG2 = Convert.ToString(DataRow["MSG2"]);
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
@@ -195,6 +196,7 @@ namespace Negocios
                     entradaSaida.Preco.IdPreco = Convert.ToInt32(DataRow["IdPreco"]);
                     entradaSaida.Preco.Descricao = Convert.ToString(DataRow["Descricao"]);
                     entradaSaida.Preco.Valor = Convert.ToDouble(DataRow["Preco"]);
+                    entradaSaida.ValorTotal = Convert.ToDouble(DataRow["ValorTotal"]);
 
 
                     entradaSaidaColecao.Add(entradaSaida);
@@ -214,7 +216,7 @@ namespace Negocios
 
         }
 
-
+        //CARREGAR TODAS ENTRADA
         public EntradaSaidaColecao CarregarTodasEntradas()
         {
             try
@@ -245,6 +247,7 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
@@ -252,6 +255,7 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
                     
+
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
                     
@@ -277,6 +281,7 @@ namespace Negocios
             }
 
         }
+        //COSULTA TODAS ENTRADA
         public EntradaSaidaColecao ConsultarTodasEntradas()
         {
             try
@@ -309,12 +314,15 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+                    entradaSaida.PessoaJuridica.MSG1 = Convert.ToString(DataRow["MSG1"]);
+                    entradaSaida.PessoaJuridica.MSG2 = Convert.ToString(DataRow["MSG2"]);
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
@@ -374,12 +382,15 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+                    entradaSaida.PessoaJuridica.MSG1 = Convert.ToString(DataRow["MSG1"]);
+                    entradaSaida.PessoaJuridica.MSG2 = Convert.ToString(DataRow["MSG2"]);
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
@@ -402,7 +413,7 @@ namespace Negocios
             }
 
         }
-        //COSULTA PARA IMPRIMIR
+        //COSULTA TODAS SAIDA
         public EntradaSaidaColecao ConsultarTodasSaida()
         {
             try
@@ -438,12 +449,15 @@ namespace Negocios
                     entradaSaida.PessoaJuridica.NomeFantasia = Convert.ToString(DataRow["NomeFantasia"]);
                     entradaSaida.PessoaJuridica.RazaoSocial = Convert.ToString(DataRow["RazaoSocial"]);
                     entradaSaida.PessoaJuridica.CNPJ = Convert.ToString(DataRow["CNPJ"]);
+                    entradaSaida.PessoaJuridica.Email = Convert.ToString(DataRow["Email"]);
                     entradaSaida.PessoaJuridica.Telefone = Convert.ToString(DataRow["Telefone"]);
                     entradaSaida.PessoaJuridica.Celular = Convert.ToString(DataRow["Celular"]);
                     entradaSaida.PessoaJuridica.Endereco = Convert.ToString(DataRow["Endereco"]);
                     entradaSaida.PessoaJuridica.Numero = Convert.ToString(DataRow["Numero"]);
                     entradaSaida.PessoaJuridica.Bairro = Convert.ToString(DataRow["Bairro"]);
                     entradaSaida.PessoaJuridica.CEP = Convert.ToString(DataRow["CEP"]);
+                    entradaSaida.PessoaJuridica.MSG1 = Convert.ToString(DataRow["MSG1"]);
+                    entradaSaida.PessoaJuridica.MSG2 = Convert.ToString(DataRow["MSG2"]);
 
                     entradaSaida.Pessoa = new Pessoa();
                     entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(DataRow["IdPessoaJuridica"]);
@@ -466,6 +480,8 @@ namespace Negocios
             }
 
         }
+               
+        //ALTEAR SAIDA  ASP
         public string UpdateSaida(EntradaSaida entradaSaida)
         {
             try
@@ -494,6 +510,8 @@ namespace Negocios
                 throw new Exception("erro inserçãogenerico " + ex.Message);
             }
         }
+
+        //ALTEAR SAIDA DESKTOP
         public string AlterarSaida(EntradaSaida entradaSaida)
         {
             try
@@ -522,7 +540,8 @@ namespace Negocios
                 throw new Exception("erro inserçãogenerico " + ex.Message);
             }
         }
-
+        
+        //ALTEAR ENTRADA  ASP
         public string AlterarEntrada(EntradaSaida entradaSaida)
         {
             try
@@ -552,7 +571,7 @@ namespace Negocios
             }
         }
 
-
+        //COSULTA TODAS SAIDA POR CODIGO E PLACA
         public EntradaSaidaColecao ConsultarSiada(int? idEntrada, string placa)
         {
             try

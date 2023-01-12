@@ -20,6 +20,8 @@ namespace ObjetoTransferencia
         public String   Numero            { get; set; }
         public String   Bairro            { get; set; }
         public String   CEP               { get; set; }
+        public String MSG1 { get; set; }
+        public String MSG2 { get; set; }
 
         public DateTime DataDeFundacao    { get; set; }
 
