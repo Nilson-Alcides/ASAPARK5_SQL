@@ -157,6 +157,7 @@ namespace ASAPARK.Controllers
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
 
+            
             //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
             //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
             if (HorasTotais <= 0 && minutos <= 2 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
