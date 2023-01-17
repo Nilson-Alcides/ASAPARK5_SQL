@@ -108,9 +108,11 @@ namespace ASAPARK.Controllers
             entradaSaida.Preco = new Preco();
              var PrecoInicial = formCollection["Preco.Valor"];
              var IdPrecoIn = formCollection["Preco.IdPreco"].Substring(0, 1);
+            var Desconto = formCollection["Desconto"];
+            var Acrescimo = formCollection["Acrescimo"];
             entradaSaida.Preco.Valor = Convert.ToDouble(PrecoInicial);
             entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPrecoIn);
-            
+            DateTime DataEntrada = entradaSaida.DataEntrada;
 
             string hora_atual_saida = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
             //string Data_atual = DateTime.Now.ToString();
@@ -118,6 +120,7 @@ namespace ASAPARK.Controllers
             //string h1 = entradaSaida.DataEntrada.ToString();
             string h2 = hora_atual_saida;
             int mm = 60;
+
 
             int HorasEntrada = entradaSaida.HoraEntrada; //Convert.ToInt32(h1.Substring(0, 2));
             int MinutoEntrada = entradaSaida.MinutoEntrada; //Convert.ToInt32(h1.Substring(3, 2));
@@ -152,84 +155,222 @@ namespace ASAPARK.Controllers
             string horasfinais = Convert.ToDateTime(horas + ":" + minutos).ToString("HH:mm");
             int HorasTotais = Convert.ToInt32(horasfinais.Substring(0, 2));
 
-            DateTime Data = DateTime.Now;
+            DateTime Data = DateTime.Now;            
             entradaSaida.DataSaida = Convert.ToDateTime(Data);
             entradaSaida.HoraSaida = Convert.ToInt32(HorasSaida);
             entradaSaida.MinutoSaida = Convert.ToInt32(MinutoSaida);
 
-            
-            //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
-            //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
-            if (HorasTotais <= 0 && minutos <= 2 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
-                && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+            //MESMA DATA DE ENTRADA
+            if (entradaSaida.DataEntrada == Data)
             {
-                IdPreco = Convert.ToInt32(IdPrecoIn);
 
-                ValorPagar = Convert.ToDouble(PrecoInicial) - Convert.ToDouble(PrecoInicial);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+                //entradaSaida.ValorTotal = Convert.ToDouble( PrecoInicial) * HorasTotais;
+                //################################# VALOR A PAGAR POR TOLERÂNCIA HORAS #################################
+                if (HorasTotais <= 0 && minutos <= 2 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
+                    && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
 
+                    ValorPagar = Convert.ToDouble(PrecoInicial) - Convert.ToDouble(PrecoInicial);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                //################################# VALOR A PAGAR POR 1 HORAS #################################
+                if (minutos >= 2 && HorasTotais <= 1.99 && Convert.ToInt32(IdPrecoIn) != 5 && Convert.ToInt32(IdPrecoIn) != 6
+                    && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    ValorPagar = Convert.ToDouble(PrecoInicial);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+
+                //################################# VALOR A PAGAR POR 2 HORAS #################################
+                if (HorasTotais >= 2 && HorasTotais <= 2.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
+                    && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+
+                    IdPreco = 2;
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+
+                    ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    //MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                //################################# VALOR A PAGAR POR 3 HORAS #################################
+                if (HorasTotais >= 3 && HorasTotais <= 3.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
+                    && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = 3;
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                //################################# VALOR A PAGAR POR 4 HORAS #################################
+                if (HorasTotais >= 4 && HorasTotais <= 4.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
+                    && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = 4;
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                //################################# VALOR A PAGAR PELA DIÁRIA #################################
+                if (Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6
+                    && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                //################################# VALOR A PAGAR PELA DIÁRIA #################################
+                if (HorasTotais >= 5 && Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6
+                    && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                if (Convert.ToInt32(IdPrecoIn) == 6 && Convert.ToInt32(IdPrecoIn) != 7
+                     && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                if (Convert.ToInt32(IdPrecoIn) == 7 && Convert.ToInt32(IdPrecoIn) != 7
+                     && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                if (Convert.ToInt32(IdPrecoIn) == 8 && Convert.ToInt32(IdPrecoIn) != 7
+                     && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
+                if (Convert.ToInt32(IdPrecoIn) == 9 && Convert.ToInt32(IdPrecoIn) != 7
+                     && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+                {
+                    PrecoNegocios precoNegocios = new PrecoNegocios();
+                    IdPreco = Convert.ToInt32(IdPrecoIn);
+
+                    PrecoColecao precoColecao = new PrecoColecao();
+                    precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
+                    var ValorHora = precoColecao[0].Valor;
+
+                    ValorPagar = Convert.ToDouble(ValorHora);
+                    entradaSaida.ValorTotal = ValorPagar;
+                    var ValorTotal = Convert.ToString(ValorPagar);
+                    ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
+                    // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
+
+                }
             }
-            //################################# VALOR A PAGAR POR 1 HORAS #################################
-            if (minutos >= 2 && HorasTotais <= 1.99 && Convert.ToInt32(IdPrecoIn) != 5 && Convert.ToInt32(IdPrecoIn) != 6
-                && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
+            else
             {
-                IdPreco = Convert.ToInt32(IdPrecoIn);
+                TimeSpan DiasCorrido = entradaSaida.DataEntrada - Data;
 
-                ValorPagar = Convert.ToDouble(PrecoInicial);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                MessageBox.Show("Valor à Pagar  por 1 hora" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-            
-            }
-            
-            //################################# VALOR A PAGAR POR 2 HORAS #################################
-            if (HorasTotais >= 2 && HorasTotais <= 2.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
-                && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
+                int totaisDia = DiasCorrido.Days;
+                int totaisHora = DiasCorrido.Hours;
+                if (totaisDia <= -1 )
+                {
+                    totaisDia = totaisDia * (-1);
+                }
 
-                PrecoNegocios precoNegocios = new PrecoNegocios();
+                if (totaisHora <= -1)
+                {
+                    totaisHora = totaisDia * (-1);
+                }
 
-                IdPreco = 2;
-
-                PrecoColecao precoColecao = new PrecoColecao();
-
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-
-                ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-                //MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            //################################# VALOR A PAGAR POR 3 HORAS #################################
-            if (HorasTotais >= 3 && HorasTotais <= 3.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
-                && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = 3;
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            //################################# VALOR A PAGAR POR 4 HORAS #################################
-            if (HorasTotais >= 4 && HorasTotais <= 4.99 && Convert.ToInt32(IdPrecoIn) != 6 && Convert.ToInt32(IdPrecoIn) != 7
-                && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
                 PrecoNegocios precoNegocios = new PrecoNegocios();
                 IdPreco = 4;
 
@@ -237,119 +378,18 @@ namespace ASAPARK.Controllers
                 precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
                 var ValorHora = precoColecao[0].Valor;
 
-                ValorPagar = Convert.ToDouble(PrecoInicial) + Convert.ToDouble(ValorHora);
+                ValorPagar = Convert.ToDouble(totaisDia) * Convert.ToDouble(ValorHora);
+                ValorPagar = Convert.ToDouble(ValorPagar) + Convert.ToDouble(Acrescimo);
+                ValorPagar = Convert.ToDouble(ValorPagar) - Convert.ToDouble(Desconto);
                 entradaSaida.ValorTotal = ValorPagar;
                 var ValorTotal = Convert.ToString(ValorPagar);
                 ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
             }
-            //################################# VALOR A PAGAR PELA DIÁRIA #################################
-            if (Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6
-                && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            //################################# VALOR A PAGAR PELA DIÁRIA #################################
-            if (HorasTotais >= 5 && Convert.ToInt32(IdPrecoIn) == 5 && Convert.ToInt32(IdPrecoIn) != 6 
-                && Convert.ToInt32(IdPrecoIn) != 7 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            if (Convert.ToInt32(IdPrecoIn) == 6 && Convert.ToInt32(IdPrecoIn) != 7
-                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            if (Convert.ToInt32(IdPrecoIn) == 7 && Convert.ToInt32(IdPrecoIn) != 7
-                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            if (Convert.ToInt32(IdPrecoIn) == 8 && Convert.ToInt32(IdPrecoIn) != 7
-                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
-            if (Convert.ToInt32(IdPrecoIn) == 9 && Convert.ToInt32(IdPrecoIn) != 7
-                 && Convert.ToInt32(IdPrecoIn) != 8 && Convert.ToInt32(IdPrecoIn) != 9)
-            {
-                PrecoNegocios precoNegocios = new PrecoNegocios();
-                IdPreco = Convert.ToInt32(IdPrecoIn);
-
-                PrecoColecao precoColecao = new PrecoColecao();
-                precoColecao = precoNegocios.ConsultarPorCodigo(IdPreco);
-                var ValorHora = precoColecao[0].Valor;
-
-                ValorPagar = Convert.ToDouble(ValorHora);
-                entradaSaida.ValorTotal = ValorPagar;
-                var ValorTotal = Convert.ToString(ValorPagar);
-                ValorTotal = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar);
-               // MessageBox.Show("Você esta dentro da tolerância" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", ValorPagar));
-
-            }
+            //TimeSpan date = Convert.ToDateTime(dataFinal) - Convert.ToDateTime(dataInicial);
+            //int totalDias = date.Days;
             
-            //Session["Imprimir"] = entradaSaida;
+            
+            
 
             EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
             string retorno = entradaSaidaNegocios.UpdateSaida(entradaSaida);

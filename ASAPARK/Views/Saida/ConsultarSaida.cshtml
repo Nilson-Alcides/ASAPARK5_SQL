@@ -50,10 +50,17 @@
 
                         <td colspan="2">
                             <button type="button" class="btn btn-warning btn-sm">
-                                @Html.ActionLink("Baixar", "SaidaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                                @Html.ActionLink("Baixar", "EditarSaida", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                @Html.ActionLink("Detalhes", "SaidaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
+                                @Html.ActionLink("Baixar", "EditarSaida", new { id = entrada.IdEntraSaida },
+                                new { onclick = "return confirm('Deseja realmente Excluir o cliente?');" })
                             </button>
 
-                            
+
                         </td>
                     </tr>
                     }

@@ -52,6 +52,16 @@ namespace ObjetoTransferencia
         public Double ValorTotal { get; set; }
         [Display(Name = "Inicial")]
         public Double ValorInicial { get; set; }
+        
+        [Display(Name = "Acrescimo")]
+        
+        public double Acrescimo { get; set; }
+        
+        [Display(Name = "Selo")]
+        
+        public double Desconto { get; set; }
+        
+        
         [Display(Name = "Status")]
         public string Status  { get; set; }
 
