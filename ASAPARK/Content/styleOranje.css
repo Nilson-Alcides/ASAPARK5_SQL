@@ -47,11 +47,14 @@ body {
     min-height: calc(137vh - 52px);
 }
 /*
-  * background-color: #5579b6 !important
-  * #805646
+     background-color: #5579b6 !important
+    
+    #5579b6 - Azul - cor primaria
+    #e38874 - Laranja
+    #805646
 */
 .bg-company {
-    background-color: #5579b6 !important;
+    background-color: #e38874 !important;
 }
 
 .sidebar .nav {
@@ -69,9 +72,12 @@ body {
 .sidebar .nav-link {
     border-radius: 0;
 }
-
+/*
+    #5579b6 - Azul
+    #e38874 - Laranja
+*/
 .sidebar ul li:hover a, .menu ul li.active a {
-    color: #5579b6;
+    color: #e38874;
 }
 
 .sidebar ul {
@@ -92,10 +98,12 @@ body {
 
 /*
  * nav-pills home
+    #5579b6 - Azul
+    #e38874 Laranja
  */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #5579b6;
+    background-color: #e38874;
 }
 
 /*
@@ -127,14 +135,18 @@ body {
     text-align: center;
 }
 
-
+/*
+ * nav-pills home
+    #5579b6 - Azul
+    #e38874 Laranja
+ */
 .btn-dark {
-    border-color: #5579b6;
+    border-color: #e38874;
 }
 
 .bg-company2 {
-    background-color: #5579b6 !important;
-    border: #5579b6;
+    background-color: #e38874 !important;
+    border: #e38874;
 }
 
 .sizet {
@@ -147,10 +159,10 @@ body {
 
 .nav-link2 {
     color: #f8f9f4;
-    background-color: #5579b6;
+    background-color: #e38874;
     border-color: #5579b6;
 }
 
     .nav-link2:houver {
-        color: #5579b6;
+        color: #e38874;
     }

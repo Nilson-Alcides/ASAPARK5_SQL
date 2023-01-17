@@ -147,6 +147,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styleOranje.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\webjars.css" />
     <Content Include="favicon.ico" />
@@ -187,6 +188,7 @@
     <Content Include="lib\font-awesome\webfonts\fa-brands-400.svg" />
     <Content Include="lib\font-awesome\webfonts\fa-regular-400.svg" />
     <Content Include="lib\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="lib\Imagens\AsaPark.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="lib\font-awesome\webfonts\fa-brands-400.eot" />
