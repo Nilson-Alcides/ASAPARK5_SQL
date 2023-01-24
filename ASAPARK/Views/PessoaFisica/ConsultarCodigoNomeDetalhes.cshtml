@@ -4,6 +4,8 @@
     ViewBag.Title = "ConsultarCodigoNomeDetalhes";
 }
 
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 @using (Html.BeginForm("DetalhesCliente", "Cliente"))
 {
     @Html.AntiForgeryToken()
@@ -78,8 +80,8 @@
                 @*__________________________________________TELEFONE______________________________________________________*@
                 <div class="form-row">
 
-                    
-                    
+
+
                 </div>
                 @*__________________________________________FIM TELEFONE______________________________________________________*@
 
@@ -108,7 +110,7 @@
                     </div>
 
                 </div>
-                
+
                 @*__________________________________________FIM ENDEREÇO______________________________________________________*@
                 <button type="button" class="btn btn-outline-primary" style="color:black">
                     @Html.ActionLink("Voltar", "ConsultarCodigoNome", new { @style = "color:white" })

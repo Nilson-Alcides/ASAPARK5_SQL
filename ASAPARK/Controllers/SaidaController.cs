@@ -75,8 +75,8 @@ namespace ASAPARK.Controllers
         EntradaSaida entradaSaida = new EntradaSaida();
         Double ValorPagar;
         int IdPreco;
-        Double PrecoInicial;
-        double SegundaHora = 3;
+       // Double PrecoInicial;
+        //double SegundaHora = 3;
         PrecoNegocios precoNegocios = new PrecoNegocios();
         PrecoColecao precoColecao = new PrecoColecao();
         // GET: Saida

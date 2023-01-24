@@ -3,6 +3,9 @@
 @{
     ViewBag.Title = "ConsultarCodigoNome";
 }
+
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 <section class="layout-content">
 
     <nav class="navbar navbar-expand-md bg-light">
@@ -27,9 +30,9 @@
                     <tr>
                         <th>Código</th>
                         <th>Nome</th>
-                        <th>CPF</th>                        
+                        <th>CPF</th>
                         <th>Telefone</th>
-                        
+
                         <th>Ação</th>
                     </tr>
                 </thead>
@@ -37,29 +40,29 @@
                     @foreach (var cliente in Model)
                     {
 
-                    <tr>
-                        <td>@cliente.Pessoa.IdPessoa </td>
-                        <td>@cliente.Nome</td>
-                        <td>@cliente.Cpf</td>                        
-                        <td>@cliente.Telefone</td>
-                        
-
-                        <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "ConsultarCodigoNomeDetalhes", new { id = cliente.Pessoa.IdPessoa }, new { @style = "color:white" })
-                            </button>
-
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                @Html.ActionLink("Editar", "EditarCliente", new { id = cliente.Pessoa.IdPessoa }, new { @style = "color:white" })
-                            </button>
+                        <tr>
+                            <td>@cliente.Pessoa.IdPessoa </td>
+                            <td>@cliente.Nome</td>
+                            <td>@cliente.Cpf</td>
+                            <td>@cliente.Telefone</td>
 
 
-                            <button type="button" class="btn btn-danger btn-sm da" style="color:black">
-                                @Html.ActionLink("Excluir", "Excluircliente", new { id = cliente.Pessoa.IdPessoa },
-                                new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
-                            </button>
-                        </td>
-                    </tr>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-info btn-sm">
+                                    @Html.ActionLink("Detalhes", "ConsultarCodigoNomeDetalhes", new { id = cliente.Pessoa.IdPessoa }, new { @style = "color:white" })
+                                </button>
+
+                                <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
+                                    @Html.ActionLink("Editar", "EditarCliente", new { id = cliente.Pessoa.IdPessoa }, new { @style = "color:white" })
+                                </button>
+
+
+                                <button type="button" class="btn btn-danger btn-sm da  fas fa-trash">
+                                    @Html.ActionLink("Excluir", "Excluircliente", new { id = cliente.Pessoa.IdPessoa },
+                                    new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
+                                </button>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

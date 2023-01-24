@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "CadPessoaFisica";
 }
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -127,9 +129,9 @@
                 <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
 
                 <button type="button" class="btn btn-outline-primary" style="color:black">
-            @Html.ActionLink("Voltar", "ConsultarCodigoNome")
-        </button>
-                
+                    @Html.ActionLink("Voltar", "ConsultarCodigoNome")
+                </button>
+
             </form>
         </div>
     </section>
