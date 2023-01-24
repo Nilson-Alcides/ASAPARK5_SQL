@@ -125,6 +125,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\MoneyMaskBundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\EntraSaidaController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
@@ -284,6 +285,7 @@
     <Content Include="Views\EntraSaida\ReimpressaoEntrada.cshtml" />
     <Content Include="Views\Admin\_ViewStart.cshtml" />
     <Content Include="Views\Admin\_Layout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

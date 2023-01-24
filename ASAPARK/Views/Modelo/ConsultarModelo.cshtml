@@ -4,6 +4,8 @@
     ViewBag.Title = "ConsultarModelo";
 }
 
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 <section class="layout-content">
 
     <nav class="navbar navbar-expand-md bg-light">
@@ -37,29 +39,29 @@
                     @foreach (var entrada in Model)
                     {
 
-                    <tr>
-                        <td>@entrada.IdModelo </td>                     
+                        <tr>
+                            <td>@entrada.IdModelo </td>
 
-                        <td>@entrada.Marca.Descricao.ToUpper()</td>
-                        <td>@entrada.Descricao.ToUpper()</td>
-
-
-                        <td colspan="2">
-                            <button type="button" class="btn btn-info btn-sm">
-                                @Html.ActionLink("Detalhes", "ModeloDetalhes", new { id = entrada.IdModelo }, new { @style = "color:white" })
-                            </button>
-
-                            <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                @Html.ActionLink("Editar", "EditarModelo", new { id = entrada.IdModelo }, new { @style = "color:white" })
-                            </button>
+                            <td>@entrada.Marca.Descricao.ToUpper()</td>
+                            <td>@entrada.Descricao.ToUpper()</td>
 
 
-                            <button type="button" class="btn btn-danger btn-sm da fas fa-trash">
-                                @Html.ActionLink("Excluir", "ExcluirModelo", new { id = entrada.IdModelo },
-                                new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir esta Marca?');" })
-                            </button>
-                        </td>
-                    </tr>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-info btn-sm">
+                                    @Html.ActionLink("Detalhes", "ModeloDetalhes", new { id = entrada.IdModelo }, new { @style = "color:white" })
+                                </button>
+
+                                <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
+                                    @Html.ActionLink("Editar", "EditarModelo", new { id = entrada.IdModelo }, new { @style = "color:white" })
+                                </button>
+
+
+                                <button type="button" class="btn btn-danger btn-sm da fas fa-trash">
+                                    @Html.ActionLink("Excluir", "ExcluirModelo", new { id = entrada.IdModelo },
+                                    new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir esta Marca?');" })
+                                </button>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

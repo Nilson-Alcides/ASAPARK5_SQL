@@ -3,6 +3,9 @@
 @{
     ViewBag.Title = "MarcaDetalhes";
 }
+
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 @using (Html.BeginForm("MarcaDetalhes", "Marca"))
 {
     @Html.AntiForgeryToken()
@@ -17,9 +20,9 @@
                     </li>
                 </ul>
                 @*<a class="btn btn-outline-primary" href="/Funcionario/CadastroFuncionario/@Model.IdMarca" role="button">
-                    <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
-                    <span>Cadastrar Novo Endereço</span>
-                </a>*@
+                        <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
+                        <span>Cadastrar Novo Endereço</span>
+                    </a>*@
             </div>
         </nav>
         <div class="container" id="cadastrarFunc">

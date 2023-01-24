@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
 
-    
+
 </head>
 <body>
 
@@ -31,8 +31,7 @@
                     <button type="button" class="btn btn-dark navbar-toggle bg-company2 pull-left">
                         <i class="fas fa-bars sizebtnh"></i>
                     </button>
-
-                    <img src="~/lib/Imagens/AsaPark.jpg" width="60" height="40" class="img-responsive">
+                    <img src="#" width="60" height="40" class="img-responsive">
                     <a class="navbar-brand " href="#">ESTACIONAMENTO</a>
                 </div>
                 <div class="nav nav-pills">
@@ -55,52 +54,14 @@
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a class="nav-link " href="/Home/Index">
-                            <i class="fas fa-home"></i> <span>Home</span>
+                            <i class="fas fa-home"></i> <span>Admim</span>
                         </a>
                     </li>
                 </ul>
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><span class="nav-link active">ENTRADA</span></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/EntraSaida/CadastroEntrada">
-                            <i class="fa fa-plus-circle"></i> <span>Entrada de Veiculos</span>
-                        </a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/EntraSaida/ReimpressaoEntrada">
-                            <i class="fa fa-print"></i> <span>Reimpressão Ticket Entrada</span>
-                        </a>
-                    </li>
-                    </li>
-
-                </ul>
-
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><span class="nav-link active">SAIDA</span></li>                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Saida/ConsultarSaida">
-                            <i class="fas fa-search"></i> <span> Todas Entrada </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Saida/CosultaPordataAtual">
-                            <i class="fa fa-car"></i> <span>Saída dia - @DateTime.Now.ToString("dd/MM/yy")</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Saida/Impressao">
-                            <i class="fa fa-print"></i> <span>Impressão Ticket Saída</span>
-                        </a>
-                    </li>
-                </ul>
-
-
                 <ul class="nav nav-pills">
                     <li class="nav-item"><span class="nav-link active">MENSALISTA</span></li>
                     <li class="nav-item">
-                        
+
                         <a class="nav-link" href="/PessoaFisica/CadPessoaFisica">
                             <i class="fas fa-plus-circle"></i> <span>Cadastrar PF</span>
                         </a>
@@ -144,12 +105,6 @@
                             <i class="fas fa-search"></i> <span>Consultar Modelo</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/EntraSaida/ConsultarEntrada">
-                            <i class="fas fa-search"></i> <span>Consultar Entrada</span>
-                        </a>
-                    </li>
-                    
 
                 </ul>
 
@@ -177,7 +132,7 @@
 
 
         <!-- Bootstrap core JavaScript
-    ================================================== -->
+        ================================================== -->
 
 
         <script src="~/Scripts/jquery.js"></script>
@@ -185,7 +140,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="~/Scripts/js-bootstrap.js"></script>
         <script src="~/Scripts/jquery.moneymask.js"></script>
-        
+
 
         <script type="text/javascript">
             $(function () {
@@ -204,14 +159,14 @@
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
         <script src="~/Scripts/jquery.js"></script>
-        <script src="~/Scripts/jquery-mask.js"></script>
-        <script src="~/Scripts/js-bootstrap.js"></script>
+            <script src="~/Scripts/jquery-mask.js"></script>
+            <script src="~/Scripts/js-bootstrap.js"></script>
         @Scripts.Render("~/bundles/inputmask")
         @section Scripts {
             @Scripts.Render("~/bundles/jqueryval")
         }
         @RenderBody()
-       <script src="~/Scripts/jquery.moneymask.js"></script>
+        <script src="~/Scripts/jquery.moneymask.js"></script>
 
 
 

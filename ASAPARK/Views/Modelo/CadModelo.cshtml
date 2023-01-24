@@ -4,6 +4,8 @@
     ViewBag.Title = "CadModelo";
 }
 
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -19,7 +21,7 @@
 
                     </li>
                 </ul>
-                
+
             </div>
         </nav>
         <div class="container" id="cadastrarProd">
@@ -39,20 +41,20 @@
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
-                
+
                 <button type="button" class="btn btn-outline-primary" style="color:black">
                     @Html.ActionLink("Voltar", "ConsultarModelo", new { @style = "color:white" })
                 </button>
                 <input type="hidden" id="id" name="id" value="" />
                 <button type="submit" class="btn btn-outline-primary">Salvar</button>
             </form>
-                <a class="btn btn-outline-primary" href="/Marca/CadMarca" role="button">
-                    <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>                
-                    <span>Cadastrar Marca</span>
-                </a>
+            <a class="btn btn-outline-primary" href="/Marca/CadMarca" role="button">
+                <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
+                <span>Cadastrar Marca</span>
+            </a>
         </div>
     </section>
-    
+
 }
 
 

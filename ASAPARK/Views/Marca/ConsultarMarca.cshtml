@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "ConsultarMarca";
 }
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
 
 <section class="layout-content">
 
@@ -27,7 +28,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Código</th>
-                        <th>Marca</th>                        
+                        <th>Marca</th>
 
                         <th>Ação</th>
                     </tr>
@@ -38,7 +39,7 @@
 
                         <tr>
                             <td>@entrada.IdMarca </td>
-                            <td>@entrada.Descricao</td>                           
+                            <td>@entrada.Descricao</td>
 
 
                             <td colspan="2">
@@ -52,7 +53,7 @@
 
 
                                 <button type="button" class="btn btn-danger btn-sm da fas fa-trash">
-                                    @Html.ActionLink("Excluir", "ExcluirMarca", new { id = entrada.IdMarca }, 
+                                    @Html.ActionLink("Excluir", "ExcluirMarca", new { id = entrada.IdMarca },
                                     new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir esta Marca?');" })
                                 </button>
                             </td>

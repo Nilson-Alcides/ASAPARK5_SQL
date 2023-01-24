@@ -1,8 +1,9 @@
 ﻿@model ObjetoTransferencia.Marca
 
-@{
-    ViewBag.Title = "EditarMarca";
-}
+@{  ViewBag.Title = "EditarMarca"; }
+
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+
 @using (Html.BeginForm("EditarMarca", "Marca"))
 {
     @Html.AntiForgeryToken()
