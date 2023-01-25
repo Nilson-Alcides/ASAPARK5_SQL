@@ -135,6 +135,7 @@
     <Compile Include="Controllers\MeusDadosController.cs" />
     <Compile Include="Controllers\ModeloController.cs" />
     <Compile Include="Controllers\PessoaFisicaController.cs" />
+    <Compile Include="Controllers\PrecoController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\RelatoriosController.cs" />
     <Compile Include="Controllers\SaidaController.cs" />
@@ -286,6 +287,7 @@
     <Content Include="Views\Admin\_ViewStart.cshtml" />
     <Content Include="Views\Admin\_Layout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Preco\ConsultarPreco.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

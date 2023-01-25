@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using AcessoBancoDados;
-using ObjetoTransferencia;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -133,6 +131,23 @@ namespace Negocios
                 precoColecao.Add(preco);
             }
             return precoColecao; 
+        }
+
+        public string Excluir(Preco preco)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimpaParametros();
+                acessoDadosSqlServer.AdicionaParametros("@IdPreco", preco.IdPreco);
+                string IdPreco = acessoDadosSqlServer.ExecutarManipulacao(CommandType.StoredProcedure, "uspPrecoExcluir").ToString();
+                return IdPreco;
+            }
+            catch (Exception exception)
+            {
+
+                return exception.Message;
+            }
+
         }
     }
 }
