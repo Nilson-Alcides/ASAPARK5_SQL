@@ -288,6 +288,8 @@
     <Content Include="Views\Admin\_Layout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Preco\ConsultarPreco.cshtml" />
+    <Content Include="Views\Preco\CadPreco.cshtml" />
+    <Content Include="Views\Preco\EditarPreco.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

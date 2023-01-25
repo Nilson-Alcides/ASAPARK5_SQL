@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "ConsultarPreco";
 }
-
+@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
 
 <section class="layout-content">
 
@@ -15,7 +15,7 @@
                     <span>Lista de Preço</span>
                 </li>
             </ul>
-            <a class="btn btn-outline-primary" href="/Marca/CadMarca" role="button">
+            <a class="btn btn-outline-primary" href="/Preco/CadPreco" role="button">
                 <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
                 <span>Cadastrar Preço</span>
             </a>
@@ -28,7 +28,8 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Código</th>
-                        <th>Preço</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
 
                         <th>Ação</th>
                     </tr>
@@ -40,6 +41,7 @@
                         <tr>
                             <td>@preco.IdPreco </td>
                             <td>@preco.Descricao</td>
+                            <td>@preco.Valor.ToString("C2")</td>
 
 
                             <td colspan="2">
@@ -58,7 +60,7 @@
                                 </button>
                             </td>
                         </tr>
-}
+                    }
                 </tbody>
             </table>
         </div>
@@ -79,7 +81,7 @@
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
 <script>
-$(document).ready(function () {
+    $(document).ready(function () {
         $('#Listacliente').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
