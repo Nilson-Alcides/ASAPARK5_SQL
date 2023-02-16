@@ -15,7 +15,9 @@ namespace ObjetoTransferencia
         public int IdEntraSaida { get; set; }
         [Display(Name = "Valor Inicial")]
         public Preco Preco { get; set; }
-        
+
+        [Display(Name = "Código")]
+        public Operacao Operacao { get; set; }
         [Display(Name = "Código")]
         public Pessoa Pessoa { get; set; }
 

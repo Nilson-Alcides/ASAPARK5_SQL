@@ -1,9 +1,7 @@
-﻿@model IEnumerable<ObjetoTransferencia.Preco>
+﻿@model IEnumerable<ObjetoTransferencia.EntradaSaida>
 
-@{
-    ViewBag.Title = "ConsultarPreco";
-}
-@{ Layout = "~/Views/Admin/_Layout.cshtml"; }
+@{ ViewBag.Title = "ConsultarEntrada"; }
+
 
 <section class="layout-content">
 
@@ -12,12 +10,12 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <i class="fas fa-caret-right"></i>
-                    <span>Lista de Preço</span>
+                    <span>Lista de Entradas</span>
                 </li>
             </ul>
-            <a class="btn btn-outline-primary" href="/Preco/CadPreco" role="button">
-                <span class="fas fa-user-plus" title="Cadastro" aria-hidden="true"></span>
-                <span>Cadastrar Preço</span>
+            <a class="btn btn-outline-primary" href="/Servico/CadastroServico" role="button">
+                <span class="fa fa-car" title="Cadastro" aria-hidden="true"></span>
+                <span>Cadastrar Serviço</span>
             </a>
         </div>
     </nav>
@@ -28,36 +26,46 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Código</th>
-                        <th>Descrição</th>
+                        <th>Serviço</th>
+                        <th>Placa</th>
+                        <th>Modalidade</th>
+                        <th>Data</th>
                         <th>Valor</th>
 
                         <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var preco in Model)
+                    @foreach (var entrada in Model)
                     {
 
                         <tr>
-                            <td>@preco.IdPreco </td>
-                            <td>@preco.Descricao</td>
-                            <td>@preco.Valor.ToString("C2")</td>
+                            <td>@entrada.IdEntraSaida </td>
+                            <td>@entrada.Operacao.Descricao</td>
+                            <td>@entrada.Placa</td>
+                            <td>@entrada.Modelo.Descricao</td>
+
+                            <td>@entrada.DataEntrada</td>
+                            <td>@entrada.Preco.Valor.ToString("C2")</td>
 
 
                             <td colspan="2">
-                                
+                                <button type="button" class="btn btn-info btn-sm">
+                                    @Html.ActionLink("Detalhes", "ConsultarEntradaDetalhes", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
+                                </button>
+
                                 <button type="button" class="btn btn-warning btn-sm fas fa-edit" style="color:black">
-                                    @Html.ActionLink("Editar", "EditarPreco", new { id = preco.IdPreco }, new { @style = "color:white" })
+                                    @Html.ActionLink("Editar", "EditarEntrada", new { id = entrada.IdEntraSaida }, new { @style = "color:white" })
                                 </button>
 
 
-                                <button type="button" class="btn btn-danger btn-sm da fas fa-trash">
-                                    @Html.ActionLink("Excluir", "Excluir", new { id = preco.IdPreco },
-                                    new { @style = "color:white", onclick = "return confirm('Deseja realmente Excluir este preço?');" })
+                                <button type="button" class="btn btn-danger btn-sm da" style="color:black">
+                                    @Html.ActionLink("Excluir", "Excluircliente", new { id = entrada.IdEntraSaida },
+                                                        new { onclick = "return confirm('Deseja realmente Excluir o funcionário?');" })
                                 </button>
                             </td>
                         </tr>
-                    }
+}
                 </tbody>
             </table>
         </div>
@@ -78,7 +86,7 @@
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
 <script>
-    $(document).ready(function () {
+$(document).ready(function () {
         $('#Listacliente').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"

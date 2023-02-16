@@ -9,9 +9,8 @@ using System.Web.Mvc;
 
 namespace ASAPARK.Controllers
 {
-    public class EntraSaidaController : Controller
+    public class ServicoController : Controller
     {
-
         //Carrega Filial
 
         public void carregarFilial()
@@ -46,7 +45,7 @@ namespace ASAPARK.Controllers
             List<SelectListItem> preco = new List<SelectListItem>();
             //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
             //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
-            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=ESTASA;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("uspPrecoCarregarGrid", con);
@@ -71,7 +70,7 @@ namespace ASAPARK.Controllers
             List<SelectListItem> marca = new List<SelectListItem>();
             //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
             //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
-            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=ESTASA;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("uspModeloCarregarGrid", con);
@@ -91,74 +90,48 @@ namespace ASAPARK.Controllers
 
             ViewBag.mod = new SelectList(marca, "Value", "Text");
         }
+        public void carregarOperacao()
+        {
+            List<SelectListItem> operacao = new List<SelectListItem>();
+            //using (MySqlConnection con = new MySqlConnection("server=localhost;port=3307;user id=root;password=361190;database=Livraria01"))
+            //server=localhost;port=3307;user id=root;password=361190;database=Livraria01server=localhost;port=3307;user id=root;password=361190;database=Livraria01
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLExpress;Initial Catalog=LojadeCalcados;Integrated Security=True"))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("uspOperacaoCarregarGrid", con);
+                SqlDataReader rdr = cmd.ExecuteReader();
 
-        // GET: EntraSaida
+                while (rdr.Read())
+                {
+                    operacao.Add(new SelectListItem
+                    {
+                        Text = rdr[1].ToString(),
+                        Value = rdr[0].ToString()
+                    });
+                }
+                con.Close();
+
+            }
+
+            ViewBag.ope = new SelectList(operacao, "Value", "Text");
+        }
+
+
+
         EntradaSaidaNegocios entradaSaidaNegocios = new EntradaSaidaNegocios();
         EntradaSaida entradaSaida = new EntradaSaida();
+        ServicosNegocios servicosNegocios = new ServicosNegocios();
+        // GET: Servico
         public ActionResult Index()
         {
             return View();
         }
-        //Cadastrar Entrada
-        public ActionResult CadastroEntrada()
-        {
-            carregarModelo();
-            carregarFilial();
-            carregarPreco();
-            return View();
-        }
-        //Cadastrar Entrada
-        [HttpPost]
-        public ActionResult CadastroEntrada(EntradaSaida entradaSaida, string dateTimeEntada)
-        {
-            carregarModelo();
-            string IdModelo = Request["mod"];
-            carregarFilial();
-            carregarPreco();
-            string IdPessoa = Request["fil"];
-            string IdPreco = Request["pre"];
-
-            if (ModelState.IsValid)
-            {
-                string hora_atual = String.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00"));
-
-                DateTime Data = DateTime.Now;
-                string h1 = hora_atual;
-                //  int mm = 60;
-
-                int HorasEntrada = Convert.ToInt32(h1.Substring(0, 2));
-                int MinutoEntrada = Convert.ToInt32(h1.Substring(3, 2));
-
-
-                //entradaSaida.DescricaoCarro = Convert.ToString(txtDescricaoCarro.Text).ToUpper();
-                //entradaSaida.Placa = Convert.ToString(mskdPlaca.Text).ToUpper();
-
-                entradaSaida.Preco = new Preco();
-                entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
-                entradaSaida.Pessoa = new Pessoa();
-                entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(IdPessoa);
-                entradaSaida.Modelo = new Modelo();
-                entradaSaida.Modelo.IdModelo = Convert.ToInt32(IdModelo);
-                entradaSaida.DataEntrada = Convert.ToDateTime(Data);
-                entradaSaida.HoraEntrada = Convert.ToInt32(HorasEntrada);
-                entradaSaida.MinutoEntrada = Convert.ToInt32(MinutoEntrada);
-
-                string retorno = entradaSaidaNegocios.Cadastrar(entradaSaida);
-
-
-                //TODO Imprementar redirecionamento diferenetes
-                ViewBag.msg = "Entrada cadastrado com sucesso!";
-                return RedirectToAction(nameof(ConsultarEntrada));
-            }
-            return View();
-        }
-
-        //Cadastrar Entrada
         public ActionResult CadastroServico()
         {
             carregarModelo();
             carregarFilial();
             carregarPreco();
+            carregarOperacao();
             return View();
         }
         //Cadastrar Entrada
@@ -166,11 +139,13 @@ namespace ASAPARK.Controllers
         public ActionResult CadastroServico(EntradaSaida entradaSaida, string dateTimeEntada)
         {
             carregarModelo();
-            string IdModelo = Request["mod"];
             carregarFilial();
             carregarPreco();
+            carregarOperacao();
+            string IdModelo = Request["mod"];
             string IdPessoa = Request["fil"];
             string IdPreco = Request["pre"];
+            string IdOperacao = Request["ope"];
 
             if (ModelState.IsValid)
             {
@@ -193,46 +168,24 @@ namespace ASAPARK.Controllers
                 entradaSaida.Pessoa.IdPessoa = Convert.ToInt32(IdPessoa);
                 entradaSaida.Modelo = new Modelo();
                 entradaSaida.Modelo.IdModelo = Convert.ToInt32(IdModelo);
+                entradaSaida.Operacao = new Operacao();
+                entradaSaida.Operacao.IdOperacao = Convert.ToInt32(IdOperacao);
                 entradaSaida.DataEntrada = Convert.ToDateTime(Data);
                 entradaSaida.HoraEntrada = Convert.ToInt32(HorasEntrada);
                 entradaSaida.MinutoEntrada = Convert.ToInt32(MinutoEntrada);
 
-                string retorno = entradaSaidaNegocios.Cadastrar(entradaSaida);
+                string retorno = servicosNegocios.Inserir(entradaSaida);
 
 
                 //TODO Imprementar redirecionamento diferenetes
                 ViewBag.msg = "Entrada cadastrado com sucesso!";
-                return RedirectToAction(nameof(ConsultarEntrada));
+                return RedirectToAction(nameof(ConsultarServicos));
             }
             return View();
         }
-
-        public ActionResult ConsultarEntrada()
+        public ActionResult ConsultarServicos()
         {
-            return View(entradaSaidaNegocios.CarregarTodasEntradas());
+            return View(servicosNegocios.ConsultarTodasSevicos());
         }
-        public ActionResult ConsultarEntradaDetalhes(int id)
-        {
-            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
-        }
-        // EDITAR Entrada        
-        public ActionResult EditarEntrada(int id)
-        {
-            carregarPreco();
-            return View(entradaSaidaNegocios.CarregarTodasEntradas().Find(entradaSaida => entradaSaida.IdEntraSaida == id));
-
-        }
-        [HttpPost]
-        public ActionResult EditarEntrada(EntradaSaida entradaSaida)
-        {
-            carregarPreco();
-            string IdPreco = Request["pre"];
-            entradaSaida.Preco = new Preco();
-            entradaSaida.Preco.IdPreco = Convert.ToInt32(IdPreco);
-
-            entradaSaidaNegocios.AlterarEntrada(entradaSaida);
-            return RedirectToAction(nameof(ConsultarEntrada));
-        }
-
     }
 }

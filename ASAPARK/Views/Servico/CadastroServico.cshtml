@@ -1,0 +1,83 @@
+﻿@model ObjetoTransferencia.EntradaSaida
+
+@{ ViewBag.Title = "CadastroServico"; }
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="layout-content">
+
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="fas fa-caret-right"></i>
+                        <span>Cadastrar Lavagens</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="cadastrarProd">
+            <form action="" method="POST">
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <br /><br />
+                        @Html.DropDownList("fil", "Escolha a Filial")
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <br /><br />
+                        @Html.DropDownList("ope", "Escolha o Serviço")
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <br /><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.DropDownList("pre", "Escolha o Valor")
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <br /><br />
+                        @Html.DropDownList("mod", "Escolha a Modelo")
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { placeholder = "AAA-9A99", @class = "form-control", @id = "Placa" } })
+                        @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-outline-primary" style="color:black">
+                    @Html.ActionLink("Voltar", "ListarProdutos", new { @style = "color:white" })
+                </button>
+                <input type="hidden" id="id" name="id" value="" />
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+            </form>
+        </div>
+    </section>}
+
+<script>
+    $(document).ready(function () {
+            $("#Placa").inputmask("mask", { "mask": "AAA-9*99" });
+
+
+
+    });
+</script>
+
+@Scripts.Render("~/bundles/inputmask")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

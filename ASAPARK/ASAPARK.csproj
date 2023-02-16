@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\RelatoriosController.cs" />
     <Compile Include="Controllers\SaidaController.cs" />
+    <Compile Include="Controllers\ServicoController.cs" />
     <Compile Include="Controllers\VendasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -290,6 +291,8 @@
     <Content Include="Views\Preco\ConsultarPreco.cshtml" />
     <Content Include="Views\Preco\CadPreco.cshtml" />
     <Content Include="Views\Preco\EditarPreco.cshtml" />
+    <Content Include="Views\Servico\CadastroServico.cshtml" />
+    <Content Include="Views\Servico\ConsultarServicos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

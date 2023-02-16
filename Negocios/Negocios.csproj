@@ -94,6 +94,7 @@
     <Compile Include="MensalistaNegicios.cs" />
     <Compile Include="FilialNegocios.cs" />
     <Compile Include="ModeloNegocios.cs" />
+    <Compile Include="OperacaoNegocios.cs" />
     <Compile Include="PedidoItemNegocios.cs" />
     <Compile Include="PedidoNegocios.cs" />
     <Compile Include="PessoaFisicaNegocios.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="PrecoNegocios.cs" />
     <Compile Include="ProdutoNegocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicoNegocios.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcessoBancoDados\AcessoBancoDados.csproj">
